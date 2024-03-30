@@ -5,7 +5,7 @@ const ThemeSwitcher = () => {
   const { theme, toggleTheme } = useTheme()
 
   return (
-    <button onClick={toggleTheme}>
+    <button onClick={toggleTheme} aria-label="Basculer le thème">
       Basculer en mode {theme === 'light' ? 'dark' : 'light'}
     </button>
   )

@@ -1,4 +1,3 @@
-import './App.css'
 import { ThemeProvider } from './contexts/ThemeContext'
 import ThemedApp from './components/ui/ThemedApp'
 

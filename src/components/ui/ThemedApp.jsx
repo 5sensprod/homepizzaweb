@@ -6,14 +6,9 @@ function ThemedApp() {
   const { theme } = useTheme()
 
   useEffect(() => {
+    // Applique simplement la classe de thème au body
     document.body.className = theme
-    // Cette classe est ajoutée une seule fois
-  }, [theme])
-
-  useEffect(() => {
-    // Ajoute la transition une seule fois au chargement de l'application
-    document.body.classList.add('theme-transition')
-  }, [])
+  }, [theme]) // Ce useEffect se déclenche à chaque changement de thème
 
   const appStyle = {
     padding: '20px',
