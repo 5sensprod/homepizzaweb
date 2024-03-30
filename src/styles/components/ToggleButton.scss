@@ -1,0 +1,31 @@
+@import '../abstracts/variables';
+
+.toggle-button {
+    padding: 0.5em 1em;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  
+    &.on {
+      background-color: $color-primary; // Assume $color-primary est défini dans vos variables
+      color: #fff;
+  
+      // Styles pour le survol du bouton dans l'état activé
+      &:hover {
+        background-color: darken($color-primary, 10%); // Assombrir la couleur de fond
+        border-color: darken($color-primary, 10%); // Assombrir la couleur de la bordure
+      }
+    }
+  
+    &.off {
+      background-color: #ccc;
+      color: #333;
+  
+      // Styles pour le survol du bouton dans l'état désactivé
+      &:hover {
+        background-color: darken(#ccc, 10%); // Assombrir la couleur de fond
+        border-color: darken(#ccc, 10%); // Assombrir la couleur de la bordure
+      }
+    }
+  }

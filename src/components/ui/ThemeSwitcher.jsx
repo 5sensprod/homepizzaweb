@@ -1,13 +1,20 @@
 import React from 'react'
 import { useTheme } from '../../contexts/ThemeContext'
+import ToggleButton from './ToggleButton'
 
 const ThemeSwitcher = () => {
   const { theme, toggleTheme } = useTheme()
 
+  const isDarkModeOn = theme === 'dark'
+
   return (
-    <button onClick={toggleTheme} aria-label="Basculer le thème">
-      Basculer en mode {theme === 'light' ? 'dark' : 'light'}
-    </button>
+    <ToggleButton
+      isOn={isDarkModeOn}
+      onClick={toggleTheme}
+      labels={{ on: 'Sombre', off: 'Clair' }}
+      disableHover={true}
+      disableTap={false}
+    />
   )
 }
 

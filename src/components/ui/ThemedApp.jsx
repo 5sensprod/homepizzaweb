@@ -8,7 +8,7 @@ function ThemedApp() {
   useEffect(() => {
     // Applique simplement la classe de thème au body
     document.body.className = theme
-  }, [theme]) // Ce useEffect se déclenche à chaque changement de thème
+  }, [theme])
 
   const appStyle = {
     padding: '20px',
