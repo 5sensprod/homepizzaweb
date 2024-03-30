@@ -5,7 +5,7 @@ import ThemedApp from './components/ui/ThemedApp'
 function App() {
   return (
     <ThemeProvider>
-      <ThemedApp /> {/* Ce composant maintenant utilise useTheme */}
+      <ThemedApp />
     </ThemeProvider>
   )
 }
