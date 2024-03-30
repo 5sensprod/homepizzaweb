@@ -7,18 +7,21 @@ function ThemedApp() {
 
   useEffect(() => {
     document.body.className = theme
-    document.body.classList.add('theme-transition')
+    // Cette classe est ajoutée une seule fois
   }, [theme])
 
+  useEffect(() => {
+    // Ajoute la transition une seule fois au chargement de l'application
+    document.body.classList.add('theme-transition')
+  }, [])
+
   const appStyle = {
-    transition: 'all 0.25s ease',
     padding: '20px',
   }
 
   return (
     <div style={appStyle}>
       <ThemeSwitcher />
-      {/* Autres composants de votre application */}
     </div>
   )
 }
