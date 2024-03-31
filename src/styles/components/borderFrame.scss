@@ -19,18 +19,20 @@
       bottom: 0;
       left: 0;
       right: 0;
-      height: 5px; // Adaptez à la hauteur de votre image
+      height: 8px; // Adaptez à la hauteur de votre image
       background-image: url('../../assets/handline_bottom.png');
+      background-size: auto 70%
     }
   
     .border-left {
-      top: 20px; // Adaptez à la hauteur de la bordure en haut
-      bottom: 5px; // Adaptez à la hauteur de la bordure en bas
-      left: 0;
-      width: 5px; // Adaptez à la largeur de votre image
-      background-image: url('../../assets/handline_left.png');
-      background-repeat: repeat-y;
-    }
+        top: 20px;
+        bottom: 5px;
+        left: 0;
+        width: 5px; // Supposons que cela soit la largeur de l'espace pour la bordure.
+        background-image: url('../../assets/handline_left.png');
+        background-repeat: repeat-y;
+        background-size: cover; // Cela couvrira la largeur de 9px, mais peut étirer l'image verticalement.
+      }
   
     .border-right {
       top: 20px; // Adaptez à la hauteur de la bordure en haut
