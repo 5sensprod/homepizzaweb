@@ -1,0 +1,49 @@
+.border-frame {
+    position: relative;
+    margin: 10px;
+  
+    .border-top, .border-bottom, .border-left, .border-right {
+      position: absolute;
+      background-repeat: no-repeat;
+    }
+  
+    .border-top {
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 20px; // Adaptez à la hauteur de votre image
+      background-image: url('../../assets/handline_top.png');
+    }
+  
+    .border-bottom {
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 5px; // Adaptez à la hauteur de votre image
+      background-image: url('../../assets/handline_bottom.png');
+    }
+  
+    .border-left {
+      top: 20px; // Adaptez à la hauteur de la bordure en haut
+      bottom: 5px; // Adaptez à la hauteur de la bordure en bas
+      left: 0;
+      width: 5px; // Adaptez à la largeur de votre image
+      background-image: url('../../assets/handline_left.png');
+      background-repeat: repeat-y;
+    }
+  
+    .border-right {
+      top: 20px; // Adaptez à la hauteur de la bordure en haut
+      bottom: 5px; // Adaptez à la hauteur de la bordure en bas
+      right: 0;
+      width: 5px; // Adaptez à la largeur de votre image
+      background-image: url('../../assets/handline_right.png');
+      background-repeat: repeat-y;
+    }
+  
+    .content {
+      position: relative; // Assurez-vous que le contenu est au-dessus des bordures
+      // Styles pour le contenu ici...
+    }
+  }
+  
