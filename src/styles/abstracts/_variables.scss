@@ -1,20 +1,61 @@
-// Couleurs de base
-$color-primary: #007bff; // Bleu, par exemple, mais vous pouvez choisir n'importe quelle couleur
-$color-secondary: #6c757d; // Gris
-$color-success: #28a745; // Vert
-$color-info: #17a2b8; // Cyan
-$color-warning: #ffc107; // Jaune
-$color-danger: #dc3545; // Rouge
-$color-light: #f8f9fa; // Blanc cassé
-$color-dark: #343a40; // Presque noir
+// Couleurs de base dérivées de l'image du menu
+$color-nearly-black: #343133;
+$color-off-white: #f0e9da;
+$color-deep-black: #040303;
+$color-light-brown: #b29675;
+$color-medium-brown: #705b4b;
+$color-soft-beige: #e3d3b6;
 
-// Couleurs de thème
-$color-dark-background: #333;
-$color-dark-text: #d6d6d6;
-$color-light-background: #d6d6d6;
-$color-light-text: #000;
-$color-header-background: #282c34;
-$color-link: #61dafb;
+// Couleurs pour le thème sombre
+$color-primary-dark: $color-light-brown; // Marron clair pour les éléments principaux et actifs
+$color-secondary-dark: $color-medium-brown; // Marron moyen
+$color-success-dark: #28a745; // Vert pour les états de succès
+$color-info-dark: #17a2b8; // Cyan pour l'information
+$color-warning-dark: #ffc107; // Jaune pour les avertissements
+$color-danger-dark: #dc3545; // Rouge original pour les erreurs
+$color-light-dark: $color-off-white; // Beige très clair pour le texte sur fond sombre
+$color-dark-dark: $color-deep-black; // Noir profond pour les arrière-plans
+
+// Couleurs pour le thème clair
+$color-primary-light: $color-medium-brown; // Marron moyen pour les éléments principaux
+$color-secondary-light: $color-soft-beige; // Beige doux pour les éléments secondaires
+$color-success-light: #28a745; // Vert original pour le succès
+$color-info-light: #17a2b8; // Cyan original pour l'information
+$color-warning-light: #ffc107; // Jaune original pour les avertissements
+$color-danger-light: #dc3545; // Rouge original pour les dangers
+$color-light-light: $color-light-brown; // Marron clair pour les arrière-plans clairs
+$color-dark-light: $color-nearly-black; // Presque noir pour le texte
+
+// Couleurs partagées entre les thèmes
+$color-dark-background: $color-deep-black; // Arrière-plan pour le thème sombre
+$color-dark-text: $color-off-white; // Texte pour le thème sombre
+$color-header-background-dark: $color-nearly-black; // Arrière-plan de l'en-tête pour le thème sombre
+$color-link-dark: $color-light-brown; // Couleur des liens pour le thème sombre
+
+$color-light-background: $color-off-white; // Arrière-plan pour le thème clair
+$color-light-text: $color-nearly-black; // Texte pour le thème clair
+$color-header-background-light: $color-soft-beige; // Arrière-plan de l'en-tête pour le thème clair
+$color-link-light: $color-medium-brown; // Couleur des liens pour le thème clair
+
+// Affectez les variables spécifiques au thème ici en fonction du thème choisi.
+// Par exemple, si vous utilisez un thème sombre, vous assignerez les variables -dark.
+$color-primary: $color-primary-dark;
+$color-secondary: $color-secondary-dark;
+$color-success: $color-success-dark;
+$color-info: $color-info-dark;
+$color-warning: $color-warning-dark;
+$color-danger: $color-danger-dark;
+$color-light: $color-light-dark;
+$color-dark: $color-dark-dark;
+$color-dark-background: $color-dark-background;
+$color-dark-text: $color-dark-text;
+$color-light-background: $color-light-background;
+$color-light-text: $color-light-text;
+$color-header-background: $color-header-background-dark;
+$color-link: $color-link-dark;
+
+// Pour passer au thème clair, remplacez par les variables -light.
+
 
 // Typographie
 $font-stack: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
