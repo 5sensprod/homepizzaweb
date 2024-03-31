@@ -1,0 +1,115 @@
+@import '../abstracts/variables';
+
+@font-face {
+  font-family: 'Chalkboy';
+  src: url('../../fonts/ChalkboyRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Schoolbell';
+  src: url('../../fonts/Schoolbell-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mathlete-Skinny';
+  src: url('../../fonts/Mathlete-Skinny.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BlackBoard';
+  src: url('../../fonts/BlackBoard.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.box {
+  position: relative;
+  color: #fff;
+  font-family: 'Chalkboy', cursive;
+  border-radius: 4px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  // Partie haut de la bordure gauche (ne se répète pas)
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px; // La largeur de votre bordure gauche
+    height: 20px; // La hauteur de l'image haut.png
+    background-image: url('../../assets/handline_left_haut.png');
+    background-repeat: no-repeat;
+    background-position: top left;
+  }
+
+  // Partie répétable de la bordure gauche
+  background-image: url('../../assets/handline_left.png');
+  background-repeat: repeat-y;
+  background-position: left center;
+
+  // Partie basse de la bordure (ne se répète pas)
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px; // Assurez-vous que cette valeur tient compte de la marge/padding de `.box`
+    height: 5px; // La hauteur de votre image bottom.png
+    background-image: url('../../assets/handline_bottom.png');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+  }
+}
+
+
+.box-header {
+  display: flex;
+  justify-content: space-between;
+  align-items:baseline;
+  position: relative;
+}
+
+.box-title {
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  font-size: 40px;
+}
+
+.box-subtitle {
+  font-family: 'Mathlete-Skinny', sans-serif;
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+
+.box-price {
+  font-family: 'BlackBoard', cursive;
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+
+.box-line {
+  flex-grow: 1;
+  margin: 0 10px; // Ajustez l'espacement si nécessaire
+  height: 6px; // Ajustez selon l'épaisseur de votre trait image
+
+  background-image: url('../../assets/pointillets_hand.png');
+  background-repeat: repeat-x; // Répétez l'image horizontalement
+  background-position: bottom;
+  background-size: auto 100%; // Maintient la hauteur à 100% de l'élément sans modifier la largeur de l'image
+}
+.box-title, .box-price {
+  z-index: 1; // S'assurer que le texte reste au-dessus de la ligne
+}
+
+.box-content {
+  font-family: 'Schoolbell', cursive;
+  font-size: 22px;
+}
