@@ -1,0 +1,23 @@
+@import './abstracts/variables';
+
+@mixin theme-styles {
+  body.light & {
+    background-color: $color-dark-background;
+    color: $color-dark-text;
+    
+    &:hover {
+      background-color: darken($color-dark-background, 10%);
+      border-color: darken($color-dark-background, 10%);
+    }
+  }
+
+  body.dark & {
+    background-color: $color-light-background;
+    color: $color-light-text;
+    
+    &:hover {
+      background-color: darken($color-light-background, 10%);
+      border-color: darken($color-light-background, 10%);
+    }
+  }
+}

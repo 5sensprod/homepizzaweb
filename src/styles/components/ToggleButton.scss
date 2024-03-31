@@ -6,26 +6,24 @@
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
-  
-    &.on {
-      background-color: $color-primary; // Assume $color-primary est défini dans vos variables
-      color: #fff;
-  
-      // Styles pour le survol du bouton dans l'état activé
+
+    // Styles pour le mode clair
+    body.light & {
+      background-color: $color-dark-background;
+      color: $color-dark-text;
       &:hover {
-        background-color: darken($color-primary, 10%); // Assombrir la couleur de fond
-        border-color: darken($color-primary, 10%); // Assombrir la couleur de la bordure
+        background-color: darken($color-dark-background, 10%);
+        border-color: darken($color-dark-background, 10%);
       }
     }
-  
-    &.off {
-      background-color: #ccc;
-      color: #333;
-  
-      // Styles pour le survol du bouton dans l'état désactivé
+
+    // Styles pour le mode sombre
+    body.dark & {
+      background-color: $color-light-background;
+      color: $color-light-text;
       &:hover {
-        background-color: darken(#ccc, 10%); // Assombrir la couleur de fond
-        border-color: darken(#ccc, 10%); // Assombrir la couleur de la bordure
+        background-color: darken($color-light-background, 10%);
+        border-color: darken($color-light-background, 10%);
       }
     }
-  }
+}

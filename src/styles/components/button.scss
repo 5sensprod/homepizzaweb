@@ -1,0 +1,11 @@
+@import '../mixins';
+
+.toggle-button {
+  padding: 0.5em 1em;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  @include theme-styles;
+}

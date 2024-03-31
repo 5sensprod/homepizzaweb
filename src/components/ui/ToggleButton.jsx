@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { motion } from 'framer-motion'
 import { buttonVariants } from '../animations/buttonAnimations'
-import '../../styles/components/ToggleButton.scss'
+import '../../styles/components/button.scss'
 
 const ToggleButton = ({ isOn, onClick, labels, disableHover, disableTap }) => {
   const appliedVariants = {
