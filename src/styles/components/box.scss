@@ -29,12 +29,11 @@
 }
 
 .box {
-  color: #fff;
+  color: $color-off-white;
   font-family: 'Chalkboy', cursive;
-  border-radius: 4px;
   padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 40px;
+  max-width: 512px;
 }
 
 
@@ -49,6 +48,7 @@
   padding-bottom: 5px;
   margin-bottom: 10px;
   font-size: 40px;
+  letter-spacing: 2px;
 }
 
 .box-subtitle {

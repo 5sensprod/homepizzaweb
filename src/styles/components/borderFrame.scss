@@ -1,7 +1,16 @@
 .border-frame {
     position: relative;
-    margin: 10px;
-  
+    width: fit-content;
+    margin: 20px;
+    padding: 20px;
+    background-color: black;
+    background-image: url('../../assets/blackboard_texture.webp'); // Chemin vers votre texture d'ardoise
+    background-size: auto; // Couvre l'entièreté du conteneur, peut-être ajustez selon besoin
+    background-repeat: repeat; // Pas nécessaire si l'image couvre tout, mais utile si elle est plus petite
+    border-radius: 15px;
+    // background-position: bottom;
+    // background-position-x: 2px;
+    
     .border-top, .border-bottom, .border-left, .border-right {
       position: absolute;
       background-repeat: no-repeat;
@@ -16,8 +25,8 @@
     }
   
     .border-bottom {
-      bottom: 0;
-      left: 0;
+      bottom: 10px;
+      left: 20px;
       right: 0;
       height: 8px; // Adaptez à la hauteur de votre image
       background-image: url('../../assets/handline_bottom.png');
@@ -25,13 +34,26 @@
     }
   
     .border-left {
+        margin-top: 40px;
         top: 20px;
-        bottom: 5px;
-        left: 0;
-        width: 5px; // Supposons que cela soit la largeur de l'espace pour la bordure.
+        bottom: 15px; // La hauteur de votre image bottom.png
+        left: 20px;
+        width: 5px; // La largeur de votre image
         background-image: url('../../assets/handline_left.png');
         background-repeat: repeat-y;
-        background-size: cover; // Cela couvrira la largeur de 9px, mais peut étirer l'image verticalement.
+        background-size: contain;
+    
+        &::before {
+          content: '';
+          position: absolute;
+          top: -20px; // Décalez le pseudo-élément vers le haut pour qu'il se positionne correctement
+          left: 0;
+          width: 100%; // Permet au pseudo-élément de remplir la largeur de .border-left
+          height: 20px; // La hauteur de votre image handline_left_top.png
+          background-image: url('../../assets/handline_left_top.png');
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
       }
   
     .border-right {

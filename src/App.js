@@ -15,6 +15,15 @@ function App() {
         <Box title="PANINIS" subtitle="Fermier" price="8,50 €">
           <p>Crème fraîche, fromage poulet nature</p>
         </Box>
+        <Box title="PANINIS" subtitle="Fermier" price="8,50 €">
+          <p>Crème fraîche, fromage poulet nature</p>
+        </Box>
+        <Box title="PANINIS" subtitle="Fermier" price="8,50 €">
+          <p>Crème fraîche, fromage poulet nature</p>
+        </Box>
+        <Box title="PANINIS" subtitle="Fermier" price="8,50 €">
+          <p>Crème fraîche, fromage poulet nature</p>
+        </Box>
       </BorderFrame>
       <Card
         title="Exemple de Titre"
