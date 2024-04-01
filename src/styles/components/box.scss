@@ -34,11 +34,32 @@
   // color: $color-off-white; // Ceci sera écrasé par theme-styles, à moins que vous souhaitiez une couleur spécifique pour .box
   font-family: 'Chalkboy', cursive;
   padding: 20px;
-  margin-bottom: 40px;
+  // margin-bottom: 40px;
   max-width: 512px;
-  // background-color: transparent !important;
+  background-color: black;
 }
 
+.box-image-background {
+  border-radius: 10px; // Pour un cercle, ou ajustez selon la forme désirée
+  display: block;
+  margin: 20px auto; // Centre l'élément horizontalement avec une marge
+  max-width: 512px; // Exemple de largeur maximale, ajustez selon vos besoins
+  height: 120px;  // Assurez-vous que la hauteur et la largeur sont égales pour un cercle parfait
+  background-image: 
+    radial-gradient(circle, rgba(0, 0, 0, 0) 60%, black 100%), 
+    url('../../assets/panini.webp'); // Le chemin vers votre image de fond
+  background-size: cover; // Couvre entièrement l'élément, ajustez selon vos besoins
+  background-position: center; // Centre l'image de fond
+  background-repeat: no-repeat; // Empêche la répétition de l'image
+}
+
+.box-image-background.hidden {
+  display: none; // Ou une autre propriété pour cacher l'élément
+}
+
+.hidden {
+  display: none; // Cache l'élément
+}
 
 .box-header {
   display: flex;
@@ -49,9 +70,9 @@
 
 .box-title {
   padding-bottom: 5px;
-  margin-bottom: 10px;
   font-size: 40px;
   letter-spacing: 2px;
+  line-height: 1px;
 }
 
 .box-subtitle {

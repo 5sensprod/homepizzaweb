@@ -10,19 +10,8 @@ function App() {
     <ThemeProvider>
       <ThemedApp />
       <BorderFrame bottom left>
-        {' '}
-        {/* Ajoutez le composant BorderFrame */}
-        <Box title="PANINIS" subtitle="Fermier" price="8,50 €">
-          <p>Crème fraîche, fromage poulet nature</p>
-        </Box>
-        <Box title="PANINIS" subtitle="Fermier" price="8,50 €">
-          <p>Crème fraîche, fromage poulet nature</p>
-        </Box>
-        <Box title="PANINIS" subtitle="Fermier" price="8,50 €">
-          <p>Crème fraîche, fromage poulet nature</p>
-        </Box>
-        <Box title="PANINIS" subtitle="Fermier" price="8,50 €">
-          <p>Crème fraîche, fromage poulet nature</p>
+        <Box subtitle="Fermier" isVisible={true} isLineVisible={false}>
+          <p>Crème fraîche, fromage et poulet nature</p>
         </Box>
       </BorderFrame>
       <Card

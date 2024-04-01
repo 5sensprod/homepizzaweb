@@ -1,17 +1,33 @@
 import React from 'react'
 import '../../styles/components/box.scss'
 
-const Box = ({ title, subtitle, price, children }) => {
+const Box = ({
+  title,
+  subtitle,
+  price,
+  children,
+  isVisible,
+  isLineVisible,
+}) => {
+  // Classe conditionnelle pour le conteneur de l'image de fond
+  const backgroundClass = isVisible
+    ? 'box-image-background'
+    : 'box-image-background hidden'
+  // Classe conditionnelle pour l'élément de la ligne
+  const lineClass = isLineVisible ? 'box-line' : 'box-line hidden'
+
   return (
     <div className="box">
       <div className="box-header">
         <h2 className="box-title">{title}</h2>
-        <span className="box-line"></span>{' '}
-        {/* Élément pour la ligne hachurée */}
+        <span className={lineClass}></span>{' '}
+        {/* Élément pour la ligne hachurée conditionnel */}
         {price && <div className="box-price">{price}</div>}
       </div>
       {subtitle && <h3 className="box-subtitle">{subtitle}</h3>}
       <div className="box-content">{children}</div>
+      <div className={backgroundClass}></div>{' '}
+      {/* Cette div sert de conteneur pour l'image de fond */}
     </div>
   )
 }
