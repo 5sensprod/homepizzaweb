@@ -1,5 +1,5 @@
 // Couleurs de base dérivées de l'image du menu
-$color-nearly-black: #343133;
+$color-nearly-black: #272526;
 $color-off-white: #f0e9da;
 $color-deep-black: #040303;
 $color-light-brown: #b29675;
@@ -27,12 +27,12 @@ $color-light-light: $color-light-brown; // Marron clair pour les arrière-plans 
 $color-dark-light: $color-nearly-black; // Presque noir pour le texte
 
 // Couleurs partagées entre les thèmes
-$color-dark-background: $color-deep-black; // Arrière-plan pour le thème sombre
+$color-dark-background: $color-nearly-black; // Arrière-plan pour le thème sombre
 $color-dark-text: $color-off-white; // Texte pour le thème sombre
 $color-header-background-dark: $color-nearly-black; // Arrière-plan de l'en-tête pour le thème sombre
 $color-link-dark: $color-light-brown; // Couleur des liens pour le thème sombre
 
-$color-light-background: $color-off-white; // Arrière-plan pour le thème clair
+$color-light-background: $color-soft-beige; // Arrière-plan pour le thème clair
 $color-light-text: $color-nearly-black; // Texte pour le thème clair
 $color-header-background-light: $color-soft-beige; // Arrière-plan de l'en-tête pour le thème clair
 $color-link-light: $color-medium-brown; // Couleur des liens pour le thème clair

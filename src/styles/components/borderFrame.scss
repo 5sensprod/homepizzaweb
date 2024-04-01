@@ -1,15 +1,19 @@
+@import '../mixins';
+@import '../abstracts/variables';
+
 .border-frame {
-    position: relative;
-    width: fit-content;
-    margin: 20px;
-    padding: 20px;
-    background-color: black;
-    background-image: url('../../assets/blackboard_texture.webp'); // Chemin vers votre texture d'ardoise
-    background-size: auto; // Couvre l'entièreté du conteneur, peut-être ajustez selon besoin
-    background-repeat: repeat; // Pas nécessaire si l'image couvre tout, mais utile si elle est plus petite
-    border-radius: 15px;
-    // background-position: bottom;
-    // background-position-x: 2px;
+  position: relative;
+  width: fit-content;
+  margin: 20px;
+  padding: 20px;
+  // Remplacer background-color par l'utilisation du mixin pour le thème
+  // background-image: url('../../assets/blackboard_texture.webp'); // Assurez-vous que le chemin est correct
+  background-size: auto; 
+  background-repeat: repeat;
+  border-radius: 15px;
+  
+  // Application du mixin pour gérer les couleurs de fond et de texte selon le thème
+  @include theme-styles;
     
     .border-top, .border-bottom, .border-left, .border-right {
       position: absolute;

@@ -1,4 +1,5 @@
 @import '../abstracts/variables';
+@import '../mixins';
 
 @font-face {
   font-family: 'Chalkboy';
@@ -29,11 +30,13 @@
 }
 
 .box {
-  color: $color-off-white;
+  // @include theme-styles; // Applique les styles de thème (couleurs de fond et de texte)
+  // color: $color-off-white; // Ceci sera écrasé par theme-styles, à moins que vous souhaitiez une couleur spécifique pour .box
   font-family: 'Chalkboy', cursive;
   padding: 20px;
   margin-bottom: 40px;
   max-width: 512px;
+  // background-color: transparent !important;
 }
 
 
