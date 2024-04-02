@@ -1,10 +1,7 @@
+// src/styles/layout/_layout.scss
 @import '../mixins';
 @import '../abstracts/variables';
 
 .centered-container {
-    @include theme-styles; // Assurez-vous que theme-styles est importé ou défini globalement
-    width: $main-width;
-    margin: 0 auto;
-  
-    // Plus de styles spécifiques à la mise en page ici ...
-  }
+  @include layout-container;
+}

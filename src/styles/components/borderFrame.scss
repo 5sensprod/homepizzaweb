@@ -7,11 +7,11 @@
   margin: 20px;
   padding: 5px;
   // Remplacer background-color par l'utilisation du mixin pour le thème
-  background-color: black;
-//  background-image: url('../../assets/blackboard_texture.webp'); 
-//   background-size: auto; 
-//   background-repeat: repeat;
-//   border-radius: 7px;
+  // background-color: black;
+background-image: url('../../assets/blackboard_texture.webp'); 
+ background-size: auto; 
+ background-repeat: repeat;
+ border-radius: 7px;
   
   // Application du mixin pour gérer les couleurs de fond et de texte selon le thème
   @include theme-styles;

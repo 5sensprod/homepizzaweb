@@ -1,23 +1,61 @@
+// src/styles/mixins.scss
 @import './abstracts/variables';
 
 @mixin theme-styles {
-  body.light & {
+  body.light {
     background-color: $color-light-background;
     color: $color-light-text;
     
     &:hover {
       background-color: darken($color-light-background, 2%);
-      // border-color: darken($color-light-background, 10%);
+    }
+
+    .centered-container {
+      background-color: $color-container-background-light; // Utiliser la couleur spécifique pour le thème clair
+      color: $color-dark-text; // Adapté à votre choix de couleur de texte pour le thème clair
+    }
+
+    .border-frame {
+      background-color: $color-light-background; // Pour le mode clair, fond plus clair
+      color: $color-dark-text; // Texte sombre sur fond clair
+    }
+
+    .card {
+      background-color: $color-light-background; // Utiliser la couleur spécifique pour le thème clair
+      color: $color-dark-text;
     }
   }
 
-  body.dark & {
+  body.dark {
     background-color: $color-dark-background;
     color: $color-dark-text;
     
     &:hover {
-    background-color: darken($color-dark-background, 2%);
-    // border-color: darken($color-dark-background, 10%);
+      background-color: darken($color-dark-background, 2%);
+    }
+
+    .centered-container {
+      background-color: $color-container-background-dark; // Utiliser la couleur spécifique pour le thème sombre
+      color: $color-light-text; // Adapté à votre choix de couleur de texte pour le thème sombre
+    }
+    .border-frame {
+      background-color: $color-dark-background; // Pour le mode sombre, fond plus sombre
+      color: $color-light-text; // Texte clair sur fond sombre
+    }
+    .card {
+      background-color: $color-dark-background; // Utiliser la couleur spécifique pour le thème sombre
+      color: $color-light-text
     }
   }
+
+  // Assurer une transition douce pour .centered-container ainsi que pour le body
+  body, .centered-container {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+@mixin layout-container {
+  width: $main-width;
+  margin: 0 auto;
+  // Ajoutez ici d'autres styles partagés pour vos conteneurs de mise en page
 }

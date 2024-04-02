@@ -27,15 +27,19 @@ $color-light-light: $color-light-brown; // Marron clair pour les arrière-plans 
 $color-dark-light: $color-nearly-black; // Presque noir pour le texte
 
 // Couleurs partagées entre les thèmes
-$color-dark-background: $color-nearly-black; // Arrière-plan pour le thème sombre
-$color-dark-text: $color-off-white; // Texte pour le thème sombre
+$color-dark-background: $color-deep-black; // Arrière-plan pour le thème sombre
+$color-dark-text: $color-deep-black; // Texte pour le thème sombre
 $color-header-background-dark: $color-nearly-black; // Arrière-plan de l'en-tête pour le thème sombre
 $color-link-dark: $color-light-brown; // Couleur des liens pour le thème sombre
 
 $color-light-background: $color-soft-beige; // Arrière-plan pour le thème clair
-$color-light-text: $color-nearly-black; // Texte pour le thème clair
+$color-light-text: $color-off-white; // Texte pour le thème clair
 $color-header-background-light: $color-soft-beige; // Arrière-plan de l'en-tête pour le thème clair
 $color-link-light: $color-medium-brown; // Couleur des liens pour le thème clair
+
+// Vous pourriez ajouter de nouvelles variables pour les arrière-plans de .centered-container
+$color-container-background-dark: $color-nearly-black; // ou une autre couleur pour le fond du container en thème sombre
+$color-container-background-light: $color-off-white;
 
 // Affectez les variables spécifiques au thème ici en fonction du thème choisi.
 // Par exemple, si vous utilisez un thème sombre, vous assignerez les variables -dark.
