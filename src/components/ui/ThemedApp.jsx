@@ -6,7 +6,6 @@ function ThemedApp() {
   const { theme } = useTheme()
 
   useEffect(() => {
-    // Applique simplement la classe de thème au body
     document.body.className = theme
   }, [theme])
 
