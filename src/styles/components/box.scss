@@ -30,35 +30,31 @@
 }
 
 .box {
-  // @include theme-styles; // Applique les styles de thème (couleurs de fond et de texte)
-  // color: $color-off-white; // Ceci sera écrasé par theme-styles, à moins que vous souhaitiez une couleur spécifique pour .box
   font-family: 'Chalkboy', cursive;
-  padding: 20px;
-  // margin-bottom: 40px;
+  padding: 8px;
   max-width: 512px;
-  background-color: black;
 }
 
 .box-image-background {
-  border-radius: 10px; // Pour un cercle, ou ajustez selon la forme désirée
+  border-radius: 5px;
   display: block;
-  margin: 20px auto; // Centre l'élément horizontalement avec une marge
-  max-width: 512px; // Exemple de largeur maximale, ajustez selon vos besoins
-  height: 120px;  // Assurez-vous que la hauteur et la largeur sont égales pour un cercle parfait
+  margin: 20px auto;
+  max-width: 512px;
+  height: 120px;  
   background-image: 
     radial-gradient(circle, rgba(0, 0, 0, 0) 60%, black 100%), 
-    url('../../assets/panini.webp'); // Le chemin vers votre image de fond
-  background-size: cover; // Couvre entièrement l'élément, ajustez selon vos besoins
-  background-position: center; // Centre l'image de fond
-  background-repeat: no-repeat; // Empêche la répétition de l'image
+    url('../../assets/panini.webp'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
 }
 
 .box-image-background.hidden {
-  display: none; // Ou une autre propriété pour cacher l'élément
+  display: none; 
 }
 
 .hidden {
-  display: none; // Cache l'élément
+  display: none; 
 }
 
 .box-header {
@@ -69,7 +65,6 @@
 }
 
 .box-title {
-  padding-bottom: 5px;
   font-size: 40px;
   letter-spacing: 2px;
   line-height: 1px;
@@ -78,7 +73,7 @@
 .box-subtitle {
   font-family: 'Mathlete-Skinny', sans-serif;
   font-size: 40px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .box-price {
@@ -89,16 +84,16 @@
 
 .box-line {
   flex-grow: 1;
-  margin: 0 10px; // Ajustez l'espacement si nécessaire
-  height: 6px; // Ajustez selon l'épaisseur de votre trait image
+  margin: 0 10px; 
+  height: 6px; 
 
   background-image: url('../../assets/pointillets_hand.png');
-  background-repeat: repeat-x; // Répétez l'image horizontalement
+  background-repeat: repeat-x;
   background-position: bottom;
-  background-size: auto 100%; // Maintient la hauteur à 100% de l'élément sans modifier la largeur de l'image
+  background-size: auto 100%; 
 }
 .box-title, .box-price {
-  z-index: 1; // S'assurer que le texte reste au-dessus de la ligne
+  z-index: 1;
 }
 
 .box-content {

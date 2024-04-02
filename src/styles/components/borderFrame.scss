@@ -5,73 +5,75 @@
   position: relative;
   width: fit-content;
   margin: 20px;
-  padding: 20px;
+  padding: 5px;
   // Remplacer background-color par l'utilisation du mixin pour le thème
-  // background-image: url('../../assets/blackboard_texture.webp'); // Assurez-vous que le chemin est correct
-  background-size: auto; 
-  background-repeat: repeat;
-  border-radius: 15px;
+  background-color: black;
+//  background-image: url('../../assets/blackboard_texture.webp'); 
+//   background-size: auto; 
+//   background-repeat: repeat;
+//   border-radius: 7px;
   
   // Application du mixin pour gérer les couleurs de fond et de texte selon le thème
   @include theme-styles;
     
-    .border-top, .border-bottom, .border-left, .border-right {
-      position: absolute;
-      background-repeat: no-repeat;
-    }
+    // .border-top, .border-bottom, .border-left, .border-right {
+    //   position: absolute;
+    //   background-repeat: no-repeat;
+
+    // }
   
-    .border-top {
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 20px; // Adaptez à la hauteur de votre image
-      background-image: url('../../assets/handline_top.png');
-    }
+    // .border-top {
+    //   top: 0;
+    //   left: 0;
+    //   right: 0;
+    //   height: 20px; // Adaptez à la hauteur de votre image
+    //   background-image: url('../../assets/handline_top.png');
+    // }
   
-    .border-bottom {
-      bottom: 10px;
-      left: 20px;
-      right: 0;
-      height: 8px; // Adaptez à la hauteur de votre image
-      background-image: url('../../assets/handline_bottom.png');
-      background-size: auto 70%
-    }
+    // .border-bottom {
+    //   bottom: 10px;
+    //   left: 0;
+    //   right: 0;
+    //   height: 8px;
+    //   background-image: url('../../assets/handline_bottom.png');
+    //   background-size: auto 70%
+    // }
   
-    .border-left {
-        margin-top: 40px;
-        top: 20px;
-        bottom: 15px; // La hauteur de votre image bottom.png
-        left: 20px;
-        width: 5px; // La largeur de votre image
-        background-image: url('../../assets/handline_left.png');
-        background-repeat: repeat-y;
-        background-size: contain;
+    // .border-left {
+      
+    //     margin-top: 40px;
+    //     top: 20px;
+    //     bottom: 15px;
+    //     left: 0;
+    //     width: 5px;
+    //     background-image: url('../../assets/handline_left.png');
+    //     background-repeat: repeat-y;
+    //     background-size: contain;
     
-        &::before {
-          content: '';
-          position: absolute;
-          top: -20px; // Décalez le pseudo-élément vers le haut pour qu'il se positionne correctement
-          left: 0;
-          width: 100%; // Permet au pseudo-élément de remplir la largeur de .border-left
-          height: 20px; // La hauteur de votre image handline_left_top.png
-          background-image: url('../../assets/handline_left_top.png');
-          background-repeat: no-repeat;
-          background-size: cover;
-        }
-      }
+    //     &::before {
+    //       content: '';
+    //       position: absolute;
+    //       top: -20px; 
+    //       left: 0;
+    //       width: 100%; 
+    //       height: 20px; 
+    //       background-image: url('../../assets/handline_left_top.png');
+    //       background-repeat: no-repeat;
+    //       background-size: cover;
+    //     }
+    //   }
   
-    .border-right {
-      top: 20px; // Adaptez à la hauteur de la bordure en haut
-      bottom: 5px; // Adaptez à la hauteur de la bordure en bas
-      right: 0;
-      width: 5px; // Adaptez à la largeur de votre image
-      background-image: url('../../assets/handline_right.png');
-      background-repeat: repeat-y;
-    }
+    // .border-right {
+    //   top: 20px;
+    //   bottom: 5px; 
+    //   right: 0;
+    //   width: 5px; 
+    //   background-image: url('../../assets/handline_right.png');
+    //   background-repeat: repeat-y;
+    // }
   
     .content {
-      position: relative; // Assurez-vous que le contenu est au-dessus des bordures
-      // Styles pour le contenu ici...
+      position: relative; 
     }
   }
   

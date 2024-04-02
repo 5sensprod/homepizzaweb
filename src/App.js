@@ -10,7 +10,13 @@ function App() {
     <ThemeProvider>
       <ThemedApp />
       <BorderFrame bottom left>
-        <Box subtitle="Fermier" isVisible={true} isLineVisible={false}>
+        <Box
+          title="PANINIS"
+          subtitle="Fermier"
+          price="8,50 €"
+          isVisible={true}
+          isLineVisible={true}
+        >
           <p>Crème fraîche, fromage et poulet nature</p>
         </Box>
       </BorderFrame>
