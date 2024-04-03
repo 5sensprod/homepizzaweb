@@ -1,12 +1,16 @@
 // src/contexts/ThemeContext.js
 
-import React, { createContext, useContext, useState } from 'react'
+import React, { createContext, useContext, useState, useEffect } from 'react'
 
 const ThemeContext = createContext()
 
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState('dark') // Thème par défaut
   const [layout, setLayout] = useState('fixed') // Nouveau state pour le layout
+
+  useEffect(() => {
+    document.body.className = theme
+  }, [theme])
 
   const toggleTheme = () => {
     setTheme((currentTheme) => (currentTheme === 'light' ? 'dark' : 'light'))

@@ -2,7 +2,6 @@ import React from 'react'
 import { useTheme } from '../../contexts/ThemeContext'
 import Header from '../Header'
 import Footer from '../Footer'
-import ThemedApp from '../ui/ThemedApp'
 import Card from '../ui/Card'
 import Box from '../ui/Box'
 import BorderFrame from '../ui/BorderFrame'
@@ -14,7 +13,6 @@ const Layout = ({ children }) => {
   return (
     <div className={containerClass}>
       <Header />
-      <ThemedApp />
       <BorderFrame bottom left>
         <Box
           title="PANINIS"

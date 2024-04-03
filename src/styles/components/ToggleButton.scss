@@ -1,29 +1,55 @@
+// src/styles/components/_ToggleButton.scss
 @import '../abstracts/variables';
+@import '../mixins';
 
-.toggle-button {
-    padding: 0.5em 1em;
-    border: 2px solid transparent;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+.toggle-button-label {
+  width: 50px;
+  height: 21px;
+  position: relative;
+  display: block;
+  border-radius: 20px;
+  box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.4), inset 0 -5px 15px rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
 
-    // Styles pour le mode clair
-    body.light & {
-      background-color: $color-dark-background;
-      color: $color-dark-text;
-      &:hover {
-        background-color: darken($color-dark-background, 10%);
-        border-color: darken($color-dark-background, 10%);
-      }
-    }
+.toggle-button-label:after {
+  content: "";
+  width: 17px;
+  height: 17px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease; // Assurez-vous que cette transition est suffisamment longue pour être visible.
+  transform: translateX(0); // Position initiale.
+  z-index: 0;
+}
 
-    // Styles pour le mode sombre
-    body.dark & {
-      background-color: $color-light-background;
-      color: $color-light-text;
-      &:hover {
-        background-color: darken($color-light-background, 10%);
-        border-color: darken($color-light-background, 10%);
-      }
-    }
+.toggle-button-input:checked + .toggle-button-label:after {
+  transform: translateX(30px); // Assurez-vous que cette translation est correcte pour votre design.
+}
+// Les icônes restent au-dessus du cercle et sont positionnées absolument par rapport à leur conteneur.
+.sun-icon,
+.moon-icon {
+  position: absolute;
+  width: 15px;
+  top: 2px;
+  z-index: 10;
+  @include theme-styles;
+  background-color: transparent;
+}
+
+.sun-icon {
+  left: 2px; // Gardez à gauche.
+}
+
+.moon-icon {
+  right: 2px; // Gardez à droite.
+}
+
+.toggle-button-input {
+  width: 0;
+  height: 0;
+  visibility: hidden;
 }

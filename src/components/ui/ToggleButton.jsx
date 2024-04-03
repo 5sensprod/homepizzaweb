@@ -1,42 +1,26 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { motion } from 'framer-motion'
-import { buttonVariants } from '../animations/buttonAnimations'
-import '../../styles/components/button.scss'
+import { useTheme } from '../../contexts/ThemeContext' // Assurez-vous que le chemin est correct
+import { ReactComponent as SunSvg } from '../../assets/sun.svg'
+import { ReactComponent as MoonSvg } from '../../assets/moon.svg'
 
-const ToggleButton = ({ isOn, onClick, labels, disableHover, disableTap }) => {
-  const appliedVariants = {
-    ...(disableHover ? {} : { whileHover: 'hover' }),
-    ...(disableTap ? {} : { whileTap: 'tap' }),
-  }
+const ToggleButton = ({ isOn, onClick }) => {
+  const { theme } = useTheme()
 
   return (
-    <motion.button
-      className={`toggle-button ${isOn ? 'on' : 'off'}`}
-      onClick={onClick}
-      variants={buttonVariants}
-      {...appliedVariants}
-    >
-      {isOn ? labels.on : labels.off}
-    </motion.button>
+    <>
+      <input
+        type="checkbox"
+        id="toggle-button"
+        className="toggle-button-input"
+        checked={isOn}
+        onChange={onClick}
+      />
+      <label htmlFor="toggle-button" className="toggle-button-label">
+        <SunSvg className={`sun-icon ${theme}`} />
+        <MoonSvg className={`moon-icon ${theme}`} />
+      </label>
+    </>
   )
-}
-
-ToggleButton.propTypes = {
-  isOn: PropTypes.bool.isRequired,
-  onClick: PropTypes.func.isRequired,
-  labels: PropTypes.shape({
-    on: PropTypes.string.isRequired,
-    off: PropTypes.string.isRequired,
-  }).isRequired,
-  disableHover: PropTypes.bool,
-  disableTap: PropTypes.bool,
-}
-
-// Valeurs par défaut pour les nouvelles props
-ToggleButton.defaultProps = {
-  disableHover: false,
-  disableTap: false,
 }
 
 export default ToggleButton

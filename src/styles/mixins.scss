@@ -24,6 +24,23 @@
       background-color: $color-light-background; // Utiliser la couleur spécifique pour le thème clair
       color: $color-dark-text;
     }
+    
+    .toggle-button-label {
+      background: $color-light-background; // Assume une variable pour le fond du bouton en mode clair
+    }
+
+    .toggle-button-label:after {
+      background: $color-light-background; // Couleur du curseur pour le mode clair
+    }
+
+    .sun-icon {
+      fill: #000000; // Couleur du soleil pour le mode clair
+    }
+
+    .moon-icon {
+      fill: #767676; // Couleur de la lune pour le mode clair, plus terne
+    }
+
   }
 
   body.dark {
@@ -46,6 +63,21 @@
       background-color: $color-dark-background; // Utiliser la couleur spécifique pour le thème sombre
       color: $color-light-text
     }
+    .toggle-button-label {
+      background: $color-dark-background; // Assume une variable pour le fond du bouton en mode sombre
+    }
+
+    .toggle-button-label:after {
+      background: $color-dark-background; // Couleur du curseur pour le mode sombre
+    }
+
+    .sun-icon {
+      fill: #7E7E7E; // Couleur du soleil pour le mode sombre, plus terne
+    }
+
+    .moon-icon {
+      fill: #FFF; // Couleur de la lune pour le mode sombre, brillante
+    }
   }
 
   // Assurer une transition douce pour .centered-container ainsi que pour le body
@@ -55,7 +87,7 @@
 }
 
 @mixin layout-container {
-  width: $main-width;
+  max-width: $main-width;
   margin: 0 auto;
   // Ajoutez ici d'autres styles partagés pour vos conteneurs de mise en page
 }
