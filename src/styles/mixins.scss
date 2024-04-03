@@ -1,4 +1,3 @@
-// src/styles/mixins.scss
 @import './abstracts/variables';
 
 @mixin theme-styles {
@@ -11,36 +10,36 @@
     }
 
     .centered-container {
-      background-color: $color-container-background-light; // Utiliser la couleur spécifique pour le thème clair
-      color: $color-dark-text; // Adapté à votre choix de couleur de texte pour le thème clair
+      background-color: $color-container-background-light;
+      color: $color-dark-text;
     }
 
     .border-frame {
-      background-color: $color-light-background; // Pour le mode clair, fond plus clair
-      color: $color-dark-text; // Texte sombre sur fond clair
+      background-color: $color-light-background;
+      color: $color-dark-text;
     }
 
     .card {
-      background-color: $color-light-background; // Utiliser la couleur spécifique pour le thème clair
+      background-color: $color-light-background;
       color: $color-dark-text;
     }
     
     .toggle-button-label {
-      background: $color-light-background; // Assume une variable pour le fond du bouton en mode clair
+      background: $color-light-background;
     }
 
     .toggle-button-label:after {
-      background: $color-light-background; // Couleur du curseur pour le mode clair
+      background: $color-light-background;
     }
-
     .sun-icon {
-      fill: #000000; // Couleur du soleil pour le mode clair
+      fill: #7E7E7E;
+      background-color: transparent;
     }
 
     .moon-icon {
-      fill: #767676; // Couleur de la lune pour le mode clair, plus terne
+      fill: #FFF;
+      background-color: transparent;
     }
-
   }
 
   body.dark {
@@ -52,35 +51,36 @@
     }
 
     .centered-container {
-      background-color: $color-container-background-dark; // Utiliser la couleur spécifique pour le thème sombre
-      color: $color-light-text; // Adapté à votre choix de couleur de texte pour le thème sombre
+      background-color: $color-container-background-dark;
+      color: $color-light-text;
     }
     .border-frame {
-      background-color: $color-dark-background; // Pour le mode sombre, fond plus sombre
-      color: $color-light-text; // Texte clair sur fond sombre
+      background-color: $color-dark-background;
+      color: $color-light-text;
     }
     .card {
-      background-color: $color-dark-background; // Utiliser la couleur spécifique pour le thème sombre
-      color: $color-light-text
+      background-color: $color-dark-background;
+      color: $color-light-text;
     }
     .toggle-button-label {
-      background: $color-dark-background; // Assume une variable pour le fond du bouton en mode sombre
+      background: $color-dark-background;
     }
 
     .toggle-button-label:after {
-      background: $color-dark-background; // Couleur du curseur pour le mode sombre
+      background: $color-dark-background;
     }
 
     .sun-icon {
-      fill: #7E7E7E; // Couleur du soleil pour le mode sombre, plus terne
+      fill: #7E7E7E;
+      background-color: transparent;
     }
 
     .moon-icon {
-      fill: #FFF; // Couleur de la lune pour le mode sombre, brillante
+      fill: #FFF;
+      background-color: transparent;
     }
   }
 
-  // Assurer une transition douce pour .centered-container ainsi que pour le body
   body, .centered-container {
     transition: background-color 0.3s ease, color 0.3s ease;
   }
@@ -89,5 +89,4 @@
 @mixin layout-container {
   max-width: $main-width;
   margin: 0 auto;
-  // Ajoutez ici d'autres styles partagés pour vos conteneurs de mise en page
 }
