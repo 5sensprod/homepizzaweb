@@ -32,12 +32,12 @@
       background: $color-light-background;
     }
     .sun-icon {
-      fill: #7E7E7E;
+      fill: $color-dark-text;
       background-color: transparent;
     }
 
     .moon-icon {
-      fill: #FFF;
+      fill: $color-dark-text;
       background-color: transparent;
     }
   }
@@ -67,11 +67,11 @@
     }
 
     .toggle-button-label:after {
-      background: $color-dark-background;
+      background: $color-container-background-dark;
     }
 
     .sun-icon {
-      fill: #7E7E7E;
+      fill: #7e7e7eb6;
       background-color: transparent;
     }
 
