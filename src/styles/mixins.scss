@@ -24,9 +24,9 @@
       color: $color-dark-text;
     }
     
-    .toggle-button-label {
-      background: $color-light-background;
-    }
+    // .toggle-button-label {
+    //   background: $color-light-background;
+    // }
 
     .toggle-button-label:after {
       background: $color-light-background;
@@ -37,7 +37,7 @@
     }
 
     .moon-icon {
-      fill: $color-dark-text;
+      fill: $color-light-text;
       background-color: transparent;
     }
   }
@@ -62,16 +62,16 @@
       background-color: $color-dark-background;
       color: $color-light-text;
     }
-    .toggle-button-label {
-      background: $color-dark-background;
-    }
+    // .toggle-button-label {
+    //   background: $color-dark-background;
+    // }
 
     .toggle-button-label:after {
       background: $color-container-background-dark;
     }
 
     .sun-icon {
-      fill: #7e7e7eb6;
+      fill: $color-dark-text;
       background-color: transparent;
     }
 
