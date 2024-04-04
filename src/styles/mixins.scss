@@ -23,6 +23,10 @@
       background-color: $color-light-background;
       color: $color-dark-text;
     }
+    .menu {
+      background-color: $color-light-background;
+      color: $color-dark-text;
+    }
     
     // .toggle-button-label {
     //   background: $color-light-background;
@@ -37,7 +41,7 @@
     }
 
     .moon-icon {
-      fill: $color-light-text;
+      fill: rgba($color-light-text, 0.5);
       background-color: transparent;
     }
   }
@@ -62,6 +66,10 @@
       background-color: $color-dark-background;
       color: $color-light-text;
     }
+    .menu {
+      background-color: $color-container-background-dark;
+      color: $color-light-text;
+    }
     // .toggle-button-label {
     //   background: $color-dark-background;
     // }
@@ -71,12 +79,12 @@
     }
 
     .sun-icon {
-      fill: $color-dark-text;
+      fill: rgba($color-dark-text, 0.5);
       background-color: transparent;
     }
 
     .moon-icon {
-      fill: #FFF;
+      fill: rgba($color-light-text, 0.9);
       background-color: transparent;
     }
   }

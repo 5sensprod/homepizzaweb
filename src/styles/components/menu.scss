@@ -1,0 +1,50 @@
+@import '../mixins';
+@import '../abstracts/variables';
+
+.menu {
+    position: absolute;
+    top: 80%;
+    left: -50px;
+    z-index: 100;
+    background-color: white;
+    // border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        padding: 10px;
+        border-bottom: 1px solid #302b2b;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        &:hover {
+            background-color: lighten($color-primary, 10%);
+        }
+    }
+
+    button {
+        display: block;
+        padding: 10px;
+        width: 100%;
+        border: none;
+        background-color: transparent;
+        text-align: left;
+
+        &:hover {
+            background-color: #e9e9e9;
+        }
+    }
+}
+
+.navigation {
+    position: relative;
+}

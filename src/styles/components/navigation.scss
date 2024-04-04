@@ -1,15 +1,16 @@
 // src/styles/components/navigation.scss
 .navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 120px;
-    height: 100%; // Ajustez la hauteur selon le besoin ou retirez cette propriété
-  
-    svg {
-      cursor: pointer;
-      height: 38px;
-  
-      // Ajoutez ici tout autre style spécifique aux icônes si nécessaire, par exemple la taille des icônes
-    }
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 120px;
+  height: 100%; // Ajustez la hauteur selon le besoin ou retirez cette propriété
+
+  svg {
+    cursor: pointer;
+    height: 38px;
+
+    // Ajoutez ici tout autre style spécifique aux icônes si nécessaire, par exemple la taille des icônes
   }
+}
