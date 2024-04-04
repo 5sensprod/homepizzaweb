@@ -9,10 +9,15 @@
 // Layout
 @import 'layout/layout';
 
+// UI
+@import 'ui/input';
+@import 'ui/inputSearch';
+
 // Components
 @import 'components/app';
 @import 'components/themes';
 @import 'components/header';
+@import 'components/navigation';
 @import 'components/logo';
 @import 'components/footer';
 // @import 'components/button';

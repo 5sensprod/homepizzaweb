@@ -1,5 +1,5 @@
 import React from 'react'
-import { useTheme } from '../../contexts/ThemeContext' // Assurez-vous que le chemin est correct
+import { useTheme } from '../../contexts/ThemeContext'
 import { ReactComponent as SunSvg } from '../../assets/sun.svg'
 import { ReactComponent as MoonSvg } from '../../assets/moon.svg'
 
