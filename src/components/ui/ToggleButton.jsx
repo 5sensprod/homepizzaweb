@@ -1,9 +1,7 @@
 import React from 'react'
 import { useTheme } from '../../contexts/ThemeContext'
-import { ReactComponent as SunSvg } from '../../assets/sun.svg'
-import { ReactComponent as MoonSvg } from '../../assets/moon.svg'
 
-const ToggleButton = ({ isOn, onClick }) => {
+const ToggleButton = ({ isOn, onClick, SunIcon, MoonIcon }) => {
   const { theme } = useTheme()
 
   return (
@@ -16,8 +14,8 @@ const ToggleButton = ({ isOn, onClick }) => {
         onChange={onClick}
       />
       <label htmlFor="toggle-button" className="toggle-button-label">
-        <SunSvg className={`sun-icon ${theme}`} />
-        <MoonSvg className={`moon-icon ${theme}`} />
+        <SunIcon className={`sun-icon ${theme}`} />
+        <MoonIcon className={`moon-icon ${theme}`} />
       </label>
     </>
   )
