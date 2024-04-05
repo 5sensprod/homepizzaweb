@@ -1,0 +1,29 @@
+.box-header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  position: relative;
+}
+
+.box-header-title {
+  font-family: 'Chalkboy', cursive;
+  font-size: 40px;
+  letter-spacing: 2px;
+}
+
+.box-line {
+  flex-grow: 1;
+  margin: 0 10px;
+  height: 6px;
+
+  background-image: url('../../assets/pointillets_hand.png');
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-size: auto 100%;
+}
+
+.box-header-price {
+  font-family: 'BlackBoard', cursive;
+  font-size: 30px;
+  letter-spacing: 2px;
+}

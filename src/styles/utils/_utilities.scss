@@ -5,3 +5,7 @@
   .dark, .light {
     @extend .theme-transition;
   }
+
+  .hidden {
+    display: none;
+  }

@@ -10,6 +10,7 @@ import PizzeriaStatusWidget from '../widgets/PizzeriaStatusWidget'
 import etoilePng from '../../assets/etoile.png'
 import CheckmarkLabel from '../widgets/CheckmarkLabel'
 import SidebarNav from '../Menu/SidebarNav'
+import BoxHeader from '../ui/BoxHeader'
 
 const Layout = ({ children }) => {
   const { theme } = useTheme()
@@ -40,16 +41,21 @@ const Layout = ({ children }) => {
           <CheckmarkLabel text="Sur place" isChecked={false} />
         </aside>
         <main className="center-zone">
+          <BoxHeader
+            title="PANINIS"
+            lineClass="box-line" // Assurez-vous que cette classe fonctionne comme prévu
+            price="8,50 €"
+          />
           <BorderFrame bottom left>
             <Box
+              isHeaderVisible={false}
               title="PANINIS"
               subtitle="Fermier"
               price="8,50 €"
-              isVisible={true}
+              isImageVisible={true}
               isLineVisible={true}
-            >
-              <p>Crème fraîche, fromage et poulet nature</p>
-            </Box>
+              content="Crème fraîche, fromage et poulet nature"
+            />
           </BorderFrame>
           <BorderFrame bottom left>
             <Card

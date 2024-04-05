@@ -5,12 +5,13 @@ const Box = ({
   title,
   subtitle,
   price,
-  children,
-  isVisible,
+  content,
+  isImageVisible,
   isLineVisible,
+  isHeaderVisible, // Ajout de la nouvelle prop
 }) => {
   // Classe conditionnelle pour le conteneur de l'image de fond
-  const backgroundClass = isVisible
+  const backgroundClass = isImageVisible
     ? 'box-image-background'
     : 'box-image-background hidden'
   // Classe conditionnelle pour l'élément de la ligne
@@ -18,16 +19,16 @@ const Box = ({
 
   return (
     <div className="box">
-      <div className="box-header">
-        <h2 className="box-title">{title}</h2>
-        <span className={lineClass}></span>{' '}
-        {/* Élément pour la ligne hachurée conditionnel */}
-        {price && <div className="box-price">{price}</div>}
-      </div>
+      {isHeaderVisible && ( // Condition pour rendre le box-header basé sur isHeaderVisible
+        <div className="box-header">
+          <h2 className="box-title">{title}</h2>
+          <span className={lineClass}></span>
+          {price && <div className="box-price">{price}</div>}
+        </div>
+      )}
       {subtitle && <h3 className="box-subtitle">{subtitle}</h3>}
-      <div className="box-content">{children}</div>
-      <div className={backgroundClass}></div>{' '}
-      {/* Cette div sert de conteneur pour l'image de fond */}
+      {content && <div className="box-content">{content}</div>}
+      <div className={backgroundClass}></div>
     </div>
   )
 }

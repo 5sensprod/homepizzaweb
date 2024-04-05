@@ -23,8 +23,11 @@
     }
 
     .right-zone {
-      flex: 0 0 20%; // Zone droite prend 20% de la largeur
-      // Vos styles supplémentaires pour la zone droite
+      flex: 0 0 20%; 
+      display: flex; // Ajoutez ceci pour activer flexbox
+      flex-direction: column; // Orientation verticale des enfants
+      justify-content: center; // Centre verticalement les enfants dans le flex container
+      align-items: center; // Centre horizontalement les enfants (si vous voulez également un centrage horizontal)
     }
   }
 }

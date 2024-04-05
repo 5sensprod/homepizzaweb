@@ -55,25 +55,38 @@
     flex-direction: column;
     padding: 0;
     list-style: none;
-    height: 180px; // Hauteur pour 4 éléments, ajustez selon la taille réelle de vos éléments
-    overflow-y: auto; // Active le défilement vertical
-
-    li {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 20px;
-        height: 45px;
-        cursor: pointer;
-
-        svg {
-            // margin-right: 10px;
-            width: 30px;
-            height: auto;
-            fill: white;
-        }
-        span {
-            margin-top: 5px;
-          }
+    height: 180px; // la hauteur peut être ajustée pour montrer 4 éléments à la fois, par exemple
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+  
+    // Masquer la scrollbar pour les navigateurs qui supportent cette fonctionnalité
+    &::-webkit-scrollbar {
+      display: none; // pour Chrome, Safari et Opera
     }
-}
+    scrollbar-width: none; // pour Firefox
+    ul {
+        margin: 0 auto; // Centrer le <ul> horizontalement
+        padding: 0;
+        width: fit-content; // Assurez-vous que le <ul> ne prend que l'espace nécessaire
+      }
+    li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      scroll-snap-align: start;
+      margin-bottom: 20px;
+      height: 45px; // ajustez la hauteur selon le contenu de votre liste
+      cursor: pointer;
+  
+      svg {
+        width: 30px;
+        height: auto;
+        fill: white;
+      }
+  
+      span {
+        margin-top: 5px;
+      }
+    }
+  }

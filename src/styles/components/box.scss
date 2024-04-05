@@ -1,33 +1,6 @@
-@font-face {
-  font-family: 'Chalkboy';
-  src: url('../../fonts/ChalkboyRegular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Schoolbell';
-  src: url('../../fonts/Schoolbell-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Mathlete-Skinny';
-  src: url('../../fonts/Mathlete-Skinny.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'BlackBoard';
-  src: url('../../fonts/BlackBoard.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
 
 .box {
-  font-family: 'Chalkboy', cursive;
+
   padding: 8px;
   max-width: 512px;
 }
@@ -37,31 +10,28 @@
   display: block;
   margin: 20px auto;
   max-width: 512px;
-  height: 120px;  
-  background-image: 
-    radial-gradient(circle, rgba(0, 0, 0, 0) 60%, black 100%), 
-    url('../../assets/panini.webp'); 
-  background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat; 
+  height: 120px;
+  background-image:
+    radial-gradient(circle, rgba(0, 0, 0, 0) 60%, black 100%),
+    url('../../assets/panini.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .box-image-background.hidden {
-  display: none; 
-}
-
-.hidden {
-  display: none; 
+  display: none;
 }
 
 .box-header {
   display: flex;
   justify-content: space-between;
-  align-items:baseline;
+  align-items: baseline;
   position: relative;
 }
 
 .box-title {
+  font-family: 'Chalkboy', cursive;
   font-size: 40px;
   letter-spacing: 2px;
   line-height: 1px;
@@ -81,15 +51,17 @@
 
 .box-line {
   flex-grow: 1;
-  margin: 0 10px; 
-  height: 6px; 
+  margin: 0 10px;
+  height: 6px;
 
   background-image: url('../../assets/pointillets_hand.png');
   background-repeat: repeat-x;
   background-position: bottom;
-  background-size: auto 100%; 
+  background-size: auto 100%;
 }
-.box-title, .box-price {
+
+.box-title,
+.box-price {
   z-index: 1;
 }
 
