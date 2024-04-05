@@ -11,6 +11,8 @@ import etoilePng from '../../assets/etoile.png'
 import CheckmarkLabel from '../widgets/CheckmarkLabel'
 import SidebarNav from '../Menu/SidebarNav'
 import BoxHeader from '../ui/BoxHeader'
+import SlideshowImage from '../ui/SlideshowImage'
+import NewsTicker from '../widgets/NewsTicker'
 
 const Layout = ({ children }) => {
   const { theme } = useTheme()
@@ -41,6 +43,8 @@ const Layout = ({ children }) => {
           <CheckmarkLabel text="Sur place" isChecked={false} />
         </aside>
         <main className="center-zone">
+          <SlideshowImage />
+          <NewsTicker />
           <BoxHeader
             title="PANINIS"
             lineClass="box-line" // Assurez-vous que cette classe fonctionne comme prévu
