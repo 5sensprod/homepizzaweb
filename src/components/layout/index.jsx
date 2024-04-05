@@ -2,7 +2,7 @@ import React from 'react'
 import { useTheme } from '../../contexts/ThemeContext'
 import Header from '../Header'
 import Footer from '../Footer'
-import Card from '../ui/Card'
+// import Card from '../ui/Card'
 import Box from '../ui/Box'
 import BorderFrame from '../ui/BorderFrame'
 import InfoComponent from '../box/InfoComponent'
@@ -61,13 +61,26 @@ const Layout = ({ children }) => {
               content="Crème fraîche, fromage et poulet nature"
             />
           </BorderFrame>
-          <BorderFrame bottom left>
-            <Card
-              title="Exemple de Titre"
-              description="Ceci est une description pour illustrer comment utiliser Card dans App.js."
+          <div className="bottom-zone">
+            <Box
+              isHeaderVisible={false}
+              title="PANINIS"
+              subtitle="Chèvre"
+              price="8,50 €"
+              isImageVisible={true}
+              isLineVisible={true}
+              content="Crème fraîche, fromage et chèvre"
             />
-          </BorderFrame>
-          {children}
+            <Box
+              isHeaderVisible={false}
+              title="PANINIS"
+              subtitle="Nutella"
+              price="8,50 €"
+              isImageVisible={true}
+              isLineVisible={true}
+              content="Crème fraîche, Nutella et sucre"
+            />
+          </div>
         </main>
         <aside className="right-zone">
           <SidebarNav onMenuItemClick={handleMenuItemClick} />

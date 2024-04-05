@@ -29,6 +29,16 @@
       justify-content: center; // Centre verticalement les enfants dans le flex container
       align-items: center; // Centre horizontalement les enfants (si vous voulez également un centrage horizontal)
     }
+
+    .bottom-zone {
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+    .bottom-zone > * {
+  flex: 1;
+  width: 50%;
+}
   }
 }
 
