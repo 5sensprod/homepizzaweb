@@ -15,6 +15,11 @@ const Layout = ({ children }) => {
   const { theme } = useTheme()
   const containerClass = `centered-container ${theme}`
 
+  const handleMenuItemClick = (itemName) => {
+    console.log(`${itemName} a été cliqué`)
+    // Autre logique de gestion du clic sur les éléments de menu
+  }
+
   return (
     <div className={containerClass}>
       <Header />
@@ -55,7 +60,7 @@ const Layout = ({ children }) => {
           {children}
         </main>
         <aside className="right-zone">
-          <SidebarNav />
+          <SidebarNav onMenuItemClick={handleMenuItemClick} />
         </aside>
       </div>
       <Footer />
