@@ -10,9 +10,14 @@ const Menu = ({ isOpen, onClose }) => {
     <div className="menu">
       <button onClick={onClose}>Fermer</button>
       <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
+        <li>Menus</li>
+        <li>Pizzas</li>
+        <li>Paninis</li>
+        <li>Gratins</li>
+        <li>TexMex</li>
+        <li>Zapwich</li>
+        <li>Desserts</li>
+        <li>Boissons</li>
       </ul>
     </div>
   )

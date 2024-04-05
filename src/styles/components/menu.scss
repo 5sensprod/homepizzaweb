@@ -48,3 +48,25 @@
 .navigation {
     position: relative;
 }
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  
+    li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+  
+      svg {
+        // margin-right: 10px;
+        width: 24px;
+        height: auto;
+        fill: white;
+      }
+    }
+  }

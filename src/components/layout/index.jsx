@@ -9,6 +9,7 @@ import InfoComponent from '../box/InfoComponent'
 import PizzeriaStatusWidget from '../widgets/PizzeriaStatusWidget'
 import etoilePng from '../../assets/etoile.png'
 import CheckmarkLabel from '../widgets/CheckmarkLabel'
+import SidebarNav from '../Menu/SidebarNav'
 
 const Layout = ({ children }) => {
   const { theme } = useTheme()
@@ -54,7 +55,7 @@ const Layout = ({ children }) => {
           {children}
         </main>
         <aside className="right-zone">
-          {/* Contenu pour la zone de droite ici */}
+          <SidebarNav />
         </aside>
       </div>
       <Footer />

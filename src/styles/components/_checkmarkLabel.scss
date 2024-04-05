@@ -1,6 +1,7 @@
 .checkmark-label {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background-color: #333;
   color: #fff;
   font-size: 1em;
@@ -12,13 +13,13 @@
 
   .checkmark-icon {
     fill: #0f0;
-    width: 20px;
+    width: 15px;
     height: auto;
     margin-right: 10px;
   }
 
   .greyed-out {
-    fill: #757575; // Gris pour un aspect "désactivé"
+    fill: #757575;
   }
 
   .checkmark-text {
