@@ -1,0 +1,38 @@
+// src/styles/components/InfoComponent.scss
+.info-component {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // background-color: #000;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    width: 90%;
+    margin: 10px auto;
+
+    .svg-icon {
+        position: relative;
+        top: 0;
+        right: 10px;
+        width: 164px;
+        flex-shrink: 0;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: -20px; // Ajustement pour compenser le décalage de .svg-icon
+        width: 100%; // Ajustez la largeur selon vos besoins
+    }
+
+    .text {
+        width: 120px; // Ajustez la largeur selon vos besoins
+    }
+
+    .phone {
+        font-size: 28px;
+        align-self: flex-start; // Aligner le numéro de téléphone à droite
+    }
+}

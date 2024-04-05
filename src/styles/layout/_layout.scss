@@ -1,7 +1,36 @@
-// src/styles/layout/_layout.scss
 @import '../mixins';
 @import '../abstracts/variables';
 
 .centered-container {
   @include layout-container;
+  display: flex; // Ajout pour la mise en page flex
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  
+  .layout-flex {
+    display: flex;
+    width: 100%; // Assurez-vous que le layout flex prend toute la largeur du conteneur
+    
+    .left-zone {
+      flex: 0 0 30%; // Zone gauche prend 30% de la largeur
+      // Vos styles supplémentaires pour la zone gauche
+    }
+
+    .center-zone {
+      flex: 0 0 50%; // Zone centrale prend 50% de la largeur
+      // Vos styles supplémentaires pour la zone centrale
+    }
+
+    .right-zone {
+      flex: 0 0 20%; // Zone droite prend 20% de la largeur
+      // Vos styles supplémentaires pour la zone droite
+    }
+  }
+}
+
+@mixin layout-container {
+  max-width: $main-width;
+  margin: 0 auto;
+  padding: 20px; // Si vous voulez de l'espace autour du contenu
 }
