@@ -38,9 +38,11 @@ const Layout = () => {
           <CheckmarkLabel text="Sur place" isChecked={false} />
         </aside>
         <main className="center-zone">
-          <Routes>
-            <Route path="/menu/:menuType" element={<MenuPage />} />
-          </Routes>
+          <section>
+            <Routes>
+              <Route path="/menu/:menuType" element={<MenuPage />} />
+            </Routes>
+          </section>
         </main>
         <aside className="right-zone">
           <SidebarNav onMenuItemClick={handleMenuItemClick} />
