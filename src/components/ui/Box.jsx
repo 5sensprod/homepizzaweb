@@ -18,18 +18,18 @@ const Box = ({
   const lineClass = isLineVisible ? 'box-line' : 'box-line hidden'
 
   return (
-    <div className="box">
+    <article className="box">
       {isHeaderVisible && ( // Condition pour rendre le box-header basé sur isHeaderVisible
         <div className="box-header">
-          <h2 className="box-title">{title}</h2>
+          <h1 className="box-title">{title}</h1>
           <span className={lineClass}></span>
           {price && <div className="box-price">{price}</div>}
         </div>
       )}
-      {subtitle && <h3 className="box-subtitle">{subtitle}</h3>}
+      {subtitle && <h2 className="box-subtitle">{subtitle}</h2>}
       {content && <div className="box-content">{content}</div>}
       <div className={backgroundClass}></div>
-    </div>
+    </article>
   )
 }
 
