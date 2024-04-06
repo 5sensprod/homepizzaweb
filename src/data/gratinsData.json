@@ -1,16 +1,36 @@
 {
   "title": "GRATINS",
-  "price": 8,
+  "price": 8.5,
   "items": [
     {
       "id": "gratin1",
-      "subtitle": "Classique",
-      "content": "Pommes de terre, crème fraîche, lardons, fromage"
+      "subtitle": "Poulet",
+      "content": "Crème fraîche, poulet, reblochon, oignons"
     },
     {
       "id": "gratin2",
-      "subtitle": "Végétarien",
-      "content": "Pommes de terre, crème fraîche, champignons, fromage, épinards"
+      "subtitle": "Viande hachée",
+      "content": "Crème fraîche, viande hachée, champignons"
+    },
+    {
+      "id": "gratin3",
+      "subtitle": "Tartiflette",
+      "content": "Crème fraîche, lardons, reblochon, oignons"
+    },
+    {
+      "id": "gratin4",
+      "subtitle": "Bolognaise",
+      "content": "Sauce tomate, viande hachée, poivrons"
+    },
+    {
+      "id": "gratin5",
+      "subtitle": "Pesto",
+      "content": "Crème fraîche, poulet, pesto"
+    },
+    {
+      "id": "gratin6",
+      "subtitle": "Carbonara",
+      "content": "Crème fraîche, lardons"
     }
   ]
 }

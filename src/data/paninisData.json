@@ -5,12 +5,47 @@
     {
       "id": "panini1",
       "subtitle": "Fermier",
-      "content": "Crème fraîche, fromage et poulet nature"
+      "content": "Crème fraîche, fromage, poulet nature"
     },
     {
       "id": "panini2",
-      "subtitle": "Italien",
-      "content": "Pesto, tomates séchées, mozzarella, jambon cru"
+      "subtitle": "3 fromages",
+      "content": "Fromage, gorgonzola, emmental"
+    },
+    {
+      "id": "panini3",
+      "subtitle": "Viande hachée",
+      "content": "Fromage, sauce tomate, viande hachée"
+    },
+    {
+      "id": "panini4",
+      "subtitle": "Jambon",
+      "content": "Fromage, sauce tomate, jambon"
+    },
+    {
+      "id": "panini5",
+      "subtitle": "Tikka",
+      "content": "Crème fraîche, poulet curry, fromage, oignons"
+    },
+    {
+      "id": "panini6",
+      "subtitle": "Chèvre",
+      "content": "Crème fraîche, fromage, chèvre"
+    },
+    {
+      "id": "panini7",
+      "subtitle": "Saumon",
+      "content": "Crème fraîche, fromage, saumon fumé"
+    },
+    {
+      "id": "panini8",
+      "subtitle": "Thon",
+      "content": "Sauce tomate, thon, fromage"
+    },
+    {
+      "id": "panini9",
+      "subtitle": "Nutella",
+      "content": "Nutella"
     }
   ]
 }
