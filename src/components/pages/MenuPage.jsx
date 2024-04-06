@@ -13,14 +13,15 @@ const MenuPage = () => {
 
   return (
     <>
-      <SlideshowImage />
-      <NewsTicker />
-      <BoxHeader
-        title={menuInfo.title}
-        lineClass="box-line"
-        price={formattedPrice}
-      />
-      {menuBoxes}
+      <SlideshowImage /> <NewsTicker />
+      <section>
+        <BoxHeader
+          title={menuInfo.title}
+          lineClass="box-line"
+          price={formattedPrice}
+        />
+        {menuBoxes}
+      </section>
     </>
   )
 }
