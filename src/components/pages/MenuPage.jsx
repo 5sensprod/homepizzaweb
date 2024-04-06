@@ -5,22 +5,41 @@ import SlideshowImage from '../ui/SlideshowImage'
 import NewsTicker from '../widgets/NewsTicker'
 import BoxHeader from '../ui/BoxHeader'
 import formatPrice from '../../utils/formatPrice'
+import Slider from 'react-slick'
 
 const MenuPage = () => {
   const menuInfo = useMenuInfo()
-  const menuBoxes = boxFactory(menuInfo.items || [])
   const formattedPrice = menuInfo.price ? formatPrice(menuInfo.price) : ''
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    // slidesToShow: 3,
+    // slidesToScroll: 3,
+  }
+
+  // Utilise boxFactory pour générer les éléments, puis enveloppe chacun dans une div
+  const menuBoxes = boxFactory(menuInfo.items || []).map(
+    (boxElement, index) => (
+      <div key={index}>
+        {' '}
+        {/* Assure un key unique pour chaque div conteneur */}
+        {boxElement}
+      </div>
+    ),
+  )
 
   return (
     <>
-      <SlideshowImage /> <NewsTicker />
+      <SlideshowImage />
+      <NewsTicker />
       <section>
         <BoxHeader
           title={menuInfo.title}
           lineClass="box-line"
           price={formattedPrice}
         />
-        {menuBoxes}
+        <Slider {...settings}>{menuBoxes}</Slider>
       </section>
     </>
   )
