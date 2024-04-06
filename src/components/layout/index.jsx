@@ -2,15 +2,13 @@ import React from 'react'
 import { useTheme } from '../../contexts/ThemeContext'
 import Header from '../Header'
 import Footer from '../Footer'
-// import Card from '../ui/Card'
 import InfoComponent from '../box/InfoComponent'
 import PizzeriaStatusWidget from '../widgets/PizzeriaStatusWidget'
 import etoilePng from '../../assets/etoile.png'
 import CheckmarkLabel from '../widgets/CheckmarkLabel'
 import SidebarNav from '../Menu/SidebarNav'
 import { Routes, Route } from 'react-router-dom'
-import PaninisPage from '../pages/PaninisPage'
-import GratinsPage from '../pages/GratinsPage'
+import MenuPage from '../pages/MenuPage'
 
 const Layout = () => {
   const { theme } = useTheme()
@@ -41,8 +39,7 @@ const Layout = () => {
         </aside>
         <main className="center-zone">
           <Routes>
-            <Route path="/paninis" element={<PaninisPage />} />
-            <Route path="/gratins" element={<GratinsPage />} />
+            <Route path="/menu/:menuType" element={<MenuPage />} />
           </Routes>
         </main>
         <aside className="right-zone">
