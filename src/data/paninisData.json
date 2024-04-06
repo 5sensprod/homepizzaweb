@@ -1,16 +1,16 @@
-[
-  {
-    "id": "panini1",
-    "title": "PANINIS",
-    "subtitle": "Fermier",
-    "price": "8,50 €",
-    "content": "Crème fraîche, fromage et poulet nature"
-  },
-  {
-    "id": "panini2",
-    "title": "PANINIS",
-    "subtitle": "Italien",
-    "price": "9,00 €",
-    "content": "Pesto, tomates séchées, mozzarella, jambon cru"
-  }
-]
+{
+  "title": "PANINIS",
+  "price": 4.5,
+  "items": [
+    {
+      "id": "panini1",
+      "subtitle": "Fermier",
+      "content": "Crème fraîche, fromage et poulet nature"
+    },
+    {
+      "id": "panini2",
+      "subtitle": "Italien",
+      "content": "Pesto, tomates séchées, mozzarella, jambon cru"
+    }
+  ]
+}

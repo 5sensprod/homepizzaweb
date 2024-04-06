@@ -5,36 +5,37 @@ import boxFactory from '../../factories/factory'
 import SlideshowImage from '../ui/SlideshowImage'
 import NewsTicker from '../widgets/NewsTicker'
 import BoxHeader from '../ui/BoxHeader'
+import formatPrice from '../../utils/formatPrice'
 
 const MenuPage = () => {
   const { menuType } = useParams()
   const { paninisData, gratinsData } = useMenuData()
 
-  let menuData
+  let menuInfo
   switch (menuType) {
     case 'paninis':
-      menuData = paninisData
+      menuInfo = paninisData
       break
     case 'gratins':
-      menuData = gratinsData
+      menuInfo = gratinsData
       break
-    // Ajoute des cases pour d'autres types de menus ici
     default:
-      menuData = []
+      menuInfo = { items: [] }
   }
 
-  const menuBoxes = boxFactory(menuData)
-  // Supposons que le premier élément contienne les infos générales du menu pour BoxHeader
-  const firstItem = menuData[0] || {}
+  const menuBoxes = boxFactory(menuInfo.items || [])
+
+  // Utilise formatPrice ici pour formater le prix pour l'affichage
+  const formattedPrice = menuInfo.price ? formatPrice(menuInfo.price) : ''
 
   return (
     <>
       <SlideshowImage />
       <NewsTicker />
       <BoxHeader
-        title={firstItem.title || 'Menu'}
+        title={menuInfo.title || 'Menu'}
         lineClass="box-line"
-        price={firstItem.price || ''}
+        price={formattedPrice}
       />
       {menuBoxes}
     </>

@@ -1,16 +1,16 @@
-[
-  {
-    "id": "gratin1",
-    "title": "GRATINS",
-    "subtitle": "Classique",
-    "price": "9,50 €",
-    "content": "Pommes de terre, crème fraîche, lardons, fromage"
-  },
-  {
-    "id": "gratin2",
-    "title": "GRATINS",
-    "subtitle": "Végétarien",
-    "price": "10,00 €",
-    "content": "Pommes de terre, crème fraîche, champignons, fromage, épinards"
-  }
-]
+{
+  "title": "GRATINS",
+  "price": 8,
+  "items": [
+    {
+      "id": "gratin1",
+      "subtitle": "Classique",
+      "content": "Pommes de terre, crème fraîche, lardons, fromage"
+    },
+    {
+      "id": "gratin2",
+      "subtitle": "Végétarien",
+      "content": "Pommes de terre, crème fraîche, champignons, fromage, épinards"
+    }
+  ]
+}

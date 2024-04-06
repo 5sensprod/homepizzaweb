@@ -28,8 +28,8 @@ export const MenuDataProvider = ({ children }) => {
     const loadMenuData = async () => {
       const paninis = await fetchData('paninis')
       const gratins = await fetchData('gratins')
-      // Assurez-vous d'ajuster la logique selon la structure de vos données importées ou de l'API
-      setPaninisData(paninis.default || paninis) // Prend en charge les deux structures
+
+      setPaninisData(paninis.default || paninis)
       setGratinsData(gratins.default || gratins)
     }
 
