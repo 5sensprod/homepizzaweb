@@ -1,6 +1,6 @@
 import React from 'react'
 import boxFactory from '../../factories/factory'
-import { gratinsData } from '../../data/data'
+import gratinsData from '../../data/gratinsData.json' // Import direct du fichier JSON
 import BoxHeader from '../ui/BoxHeader'
 import SlideshowImage from '../ui/SlideshowImage'
 import NewsTicker from '../widgets/NewsTicker'

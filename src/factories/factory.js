@@ -2,9 +2,9 @@ import React from 'react'
 import Box from '../components/ui/Box'
 
 const boxFactory = (boxData) => {
-  return boxData.map((data, index) => (
+  return boxData.map((data) => (
     <Box
-      key={index}
+      key={data.id}
       isHeaderVisible={false}
       title={data.title}
       subtitle={data.subtitle}
