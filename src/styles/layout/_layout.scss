@@ -3,31 +3,33 @@
 
 .centered-container {
   @include layout-container;
-  display: flex; // Ajout pour la mise en page flex
+  display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   
   .layout-flex {
     display: flex;
-    width: 100%; // Assurez-vous que le layout flex prend toute la largeur du conteneur
+    width: 100%;
     
     .left-zone {
-      flex: 0 0 30%; // Zone gauche prend 30% de la largeur
+      flex: 0 0 30%;
       // Vos styles supplémentaires pour la zone gauche
     }
 
     .center-zone {
-      flex: 0 0 50%; // Zone centrale prend 50% de la largeur
-      // Vos styles supplémentaires pour la zone centrale
+      display: flex;
+      flex-direction: column;
+      flex: 0 0 50%;
+      // gap: 10px;
     }
 
     .right-zone {
       flex: 0 0 20%; 
-      display: flex; // Ajoutez ceci pour activer flexbox
-      flex-direction: column; // Orientation verticale des enfants
-      justify-content: center; // Centre verticalement les enfants dans le flex container
-      align-items: center; // Centre horizontalement les enfants (si vous voulez également un centrage horizontal)
+      display: flex;
+      flex-direction: column; 
+      justify-content: center;
+      align-items: center;
     }
 
     .bottom-zone {
@@ -45,5 +47,5 @@
 @mixin layout-container {
   max-width: $main-width;
   margin: 0 auto;
-  padding: 20px; // Si vous voulez de l'espace autour du contenu
+  padding: 20px;
 }

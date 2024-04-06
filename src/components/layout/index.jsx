@@ -14,7 +14,7 @@ import BoxHeader from '../ui/BoxHeader'
 import SlideshowImage from '../ui/SlideshowImage'
 import NewsTicker from '../widgets/NewsTicker'
 
-const Layout = ({ children }) => {
+const Layout = () => {
   const { theme } = useTheme()
   const containerClass = `centered-container ${theme}`
 
@@ -35,8 +35,8 @@ const Layout = ({ children }) => {
           />
           <PizzeriaStatusWidget
             name="Saint-Memmie"
-            isOpen={true} // Remplacez par l'état réel ou une prop
-            time="11:57" // Remplacez par l'heure réelle ou une prop
+            isOpen={true}
+            time="11:57"
           />
           <CheckmarkLabel text="À emporter" isChecked={true} />
           <CheckmarkLabel text="Livraison" />
@@ -45,11 +45,7 @@ const Layout = ({ children }) => {
         <main className="center-zone">
           <SlideshowImage />
           <NewsTicker />
-          <BoxHeader
-            title="PANINIS"
-            lineClass="box-line" // Assurez-vous que cette classe fonctionne comme prévu
-            price="8,50 €"
-          />
+          <BoxHeader title="PANINIS" lineClass="box-line" price="8,50 €" />
           <BorderFrame bottom left>
             <Box
               isHeaderVisible={false}
