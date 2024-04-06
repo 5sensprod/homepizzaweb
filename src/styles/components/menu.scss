@@ -55,7 +55,7 @@
     flex-direction: column;
     padding: 0;
     list-style: none;
-    height: 180px; // la hauteur peut être ajustée pour montrer 4 éléments à la fois, par exemple
+    height: 235px; // la hauteur peut être ajustée pour montrer 4 éléments à la fois, par exemple
     overflow-y: auto;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
@@ -76,11 +76,11 @@
       align-items: center;
       scroll-snap-align: start;
       margin-bottom: 20px;
-      height: 45px; // ajustez la hauteur selon le contenu de votre liste
+      height: 66px; // ajustez la hauteur selon le contenu de votre liste
       cursor: pointer;
   
       svg {
-        width: 30px;
+        width: 48px;
         height: auto;
         fill: white;
       }
