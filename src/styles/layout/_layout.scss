@@ -7,27 +7,27 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  
+
   .layout-flex {
     display: flex;
     width: 100%;
-    
+
     .left-zone {
-      flex: 0 0 30%;
-      // Vos styles supplémentaires pour la zone gauche
+      flex: 0 1 30%;
     }
 
     .center-zone {
       display: flex;
       flex-direction: column;
-      flex: 0 0 50%;
-      // gap: 10px;
+      flex: 0 1 50%;
+      width: 50%;
+      min-width: 435px;
     }
 
     .right-zone {
-      flex: 0 0 20%; 
       display: flex;
-      flex-direction: column; 
+      flex: 0 1 20%;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
     }
@@ -37,10 +37,11 @@
       align-items: center;
       width: 100%;
     }
-    .bottom-zone > * {
-  flex: 1;
-  width: 50%;
-}
+
+    .bottom-zone>* {
+      flex: 1;
+      width: 50%;
+    }
   }
 }
 
