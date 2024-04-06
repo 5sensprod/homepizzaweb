@@ -1,9 +1,18 @@
 // src/components/Menu/index.jsx
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Menu = ({ isOpen, onClose }) => {
+  const navigate = useNavigate()
+
   if (!isOpen) {
     return null
+  }
+
+  // Fonction pour gérer la navigation
+  const handleNavigate = (path) => {
+    navigate(path)
+    onClose() // Fermer le menu après la navigation
   }
 
   return (
@@ -12,8 +21,8 @@ const Menu = ({ isOpen, onClose }) => {
       <ul>
         <li>Menus</li>
         <li>Pizzas</li>
-        <li>Paninis</li>
-        <li>Gratins</li>
+        <li onClick={() => handleNavigate('/paninis')}>Paninis</li>
+        <li onClick={() => handleNavigate('/gratins')}>Gratins</li>
         <li>TexMex</li>
         <li>Zapwich</li>
         <li>Desserts</li>

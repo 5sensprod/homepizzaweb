@@ -1,11 +1,12 @@
 import React from 'react'
+import { useMenuData } from '../../contexts/MenuDataContext'
 import boxFactory from '../../factories/factory'
-import gratinsData from '../../data/gratinsData.json' // Import direct du fichier JSON
 import BoxHeader from '../ui/BoxHeader'
 import SlideshowImage from '../ui/SlideshowImage'
 import NewsTicker from '../widgets/NewsTicker'
 
 const GratinsPage = () => {
+  const { gratinsData } = useMenuData()
   const gratinsBoxes = boxFactory(gratinsData)
 
   return (
