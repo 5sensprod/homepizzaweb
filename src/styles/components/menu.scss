@@ -1,6 +1,3 @@
-@import '../mixins';
-@import '../abstracts/variables';
-
 .menu {
     position: absolute;
     top: 80%;
@@ -68,7 +65,7 @@
     ul {
         margin: 0 auto; // Centrer le <ul> horizontalement
         padding: 0;
-        width: fit-content; // Assurez-vous que le <ul> ne prend que l'espace nécessaire
+        width: fit-content; // Assure que le <ul> ne prend que l'espace nécessaire
       }
     li {
       display: flex;
@@ -76,7 +73,7 @@
       align-items: center;
       scroll-snap-align: start;
       margin-bottom: 20px;
-      height: 66px; // ajustez la hauteur selon le contenu de votre liste
+      height: 66px; // ajustez la hauteur selon le contenu de la liste
       cursor: pointer;
   
       svg {
