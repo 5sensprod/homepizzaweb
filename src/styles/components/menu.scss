@@ -1,89 +1,99 @@
 .menu {
-    position: absolute;
-    top: 80%;
-    left: -50px;
-    z-index: 100;
-    background-color: white;
-    // border: 1px solid #ccc;
-    border-radius: 8px;
-    width: 100px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 80%;
+  left: -50px;
+  z-index: 100;
+  background-color: white;
+  // border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 
-    ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    padding: 10px;
+    border-bottom: 1px solid #302b2b;
+
+    &:last-child {
+      border-bottom: none;
     }
 
-    li {
-        padding: 10px;
-        border-bottom: 1px solid #302b2b;
-
-        &:last-child {
-            border-bottom: none;
-        }
-
-        &:hover {
-            background-color: lighten($color-primary, 10%);
-        }
+    &:hover {
+      background-color: lighten($color-primary, 10%);
     }
 
-    button {
-        display: block;
-        padding: 10px;
-        width: 100%;
-        border: none;
-        background-color: transparent;
-        text-align: left;
-
-        &:hover {
-            background-color: #e9e9e9;
-        }
+    &.active {
+      background-color: darken($color-primary, 10%);
+      color: #fff;
+      // Ajoute d'autres styles ici pour l'état actif
     }
+  }
+
+  button {
+    display: block;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    text-align: left;
+
+    &:hover {
+      background-color: #e9e9e9;
+    }
+  }
 }
 
 .navigation {
-    position: relative;
+  position: relative;
 }
 
 .sidebar-nav {
-    margin: 20px auto;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  list-style: none;
+  height: 235px; // la hauteur peut être ajustée pour montrer 4 éléments à la fois, par exemple
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+
+  // Masquer la scrollbar pour les navigateurs qui supportent cette fonctionnalité
+  &::-webkit-scrollbar {
+    display: none; // pour Chrome, Safari et Opera
+  }
+
+  scrollbar-width: none; // pour Firefox
+
+  ul {
+    margin: 0 auto; // Centrer le <ul> horizontalement
+    padding: 0;
+    width: fit-content; // Assure que le <ul> ne prend que l'espace nécessaire
+  }
+
+  li {
     display: flex;
     flex-direction: column;
-    padding: 0;
-    list-style: none;
-    height: 235px; // la hauteur peut être ajustée pour montrer 4 éléments à la fois, par exemple
-    overflow-y: auto;
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-  
-    // Masquer la scrollbar pour les navigateurs qui supportent cette fonctionnalité
-    &::-webkit-scrollbar {
-      display: none; // pour Chrome, Safari et Opera
+    align-items: center;
+    scroll-snap-align: start;
+    margin-bottom: 20px;
+    height: 66px; // ajustez la hauteur selon le contenu de la liste
+    cursor: pointer;
+
+    svg {
+      width: 48px;
+      height: auto;
+      fill: white;
     }
-    scrollbar-width: none; // pour Firefox
-    ul {
-        margin: 0 auto; // Centrer le <ul> horizontalement
-        padding: 0;
-        width: fit-content; // Assure que le <ul> ne prend que l'espace nécessaire
-      }
-    li {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      scroll-snap-align: start;
-      margin-bottom: 20px;
-      height: 66px; // ajustez la hauteur selon le contenu de la liste
-      cursor: pointer;
-  
-      svg {
-        width: 48px;
-        height: auto;
-        fill: white;
-      }
-  
-      span {
-        margin-top: 5px;
-      }
+
+    span {
+      margin-top: 5px;
     }
   }
+}
