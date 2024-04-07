@@ -83,23 +83,22 @@
     align-items: center;
     scroll-snap-align: start;
     margin-bottom: 20px;
-    height: 66px; // ajustez la hauteur selon le contenu de la liste
+    height: 66px;
     cursor: pointer;
+    color: #848484;
 
     &:hover {
-      background-color: lighten($color-primary, 10%);
-      color: #fff; // Ajoute une couleur de texte pour le hover si nécessaire
+      color: #fff;
     }
 
     &.active {
-      background-color: darken($color-primary, 10%);
-      color: #fff; // Assure que le texte reste lisible sur le fond foncé
+      color: #fff;
     }
 
     svg {
       width: 48px;
       height: auto;
-      fill: currentColor;
+      fill: currentColor; 
     }
 
     span {
