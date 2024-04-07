@@ -8,39 +8,47 @@ import { ReactComponent as ZapwishIcon } from '../../assets/icons/zapwish-icon.s
 import { ReactComponent as DessertIcon } from '../../assets/icons/dessert-icon.svg'
 import { ReactComponent as DrinkIcon } from '../../assets/icons/drink-icon.svg'
 
-const SidebarNav = ({ onMenuItemClick }) => {
+import { useNavigate } from 'react-router-dom'
+// Les imports des icônes restent inchangés...
+
+const SidebarNav = () => {
+  const navigate = useNavigate()
+
+  const onMenuItemClick = (menuType) => {
+    navigate(`/menu/${menuType}`)
+  }
   return (
     <nav className="sidebar-nav">
       <ul>
-        <li onClick={() => onMenuItemClick('Pizzas')}>
+        <li onClick={() => onMenuItemClick('pizzas')}>
           <PizzaIcon />
           <span>Pizzas</span>
         </li>
-        <li onClick={() => onMenuItemClick('Menus')}>
+        <li onClick={() => onMenuItemClick('menus')}>
           <MenuDinishIcon />
           <span>Menus</span>
         </li>
-        <li onClick={() => onMenuItemClick('Paninis')}>
+        <li onClick={() => onMenuItemClick('paninis')}>
           <PaniniIcon />
           <span>Paninis</span>
         </li>
-        <li onClick={() => onMenuItemClick('Gratins')}>
+        <li onClick={() => onMenuItemClick('gratins')}>
           <GratinIcon />
           <span>Gratins</span>
         </li>
-        <li onClick={() => onMenuItemClick('TexMex')}>
+        <li onClick={() => onMenuItemClick('texmex')}>
           <TexMexIcon />
           <span>TexMex</span>
         </li>
-        <li onClick={() => onMenuItemClick('Zapwish')}>
+        <li onClick={() => onMenuItemClick('zapwish')}>
           <ZapwishIcon />
           <span>Zapwish</span>
         </li>
-        <li onClick={() => onMenuItemClick('Desserts')}>
+        <li onClick={() => onMenuItemClick('desserts')}>
           <DessertIcon />
           <span>Desserts</span>
         </li>
-        <li onClick={() => onMenuItemClick('Boissons')}>
+        <li onClick={() => onMenuItemClick('boissons')}>
           <DrinkIcon />
           <span>Boissons</span>
         </li>
