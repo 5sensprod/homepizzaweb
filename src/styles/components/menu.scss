@@ -25,13 +25,13 @@
     }
 
     &:hover {
-      background-color: lighten($color-primary, 10%);
+      color: lighten($color-primary, 10%);
+
     }
 
     &.active {
-      background-color: darken($color-primary, 10%);
-      color: #fff;
-      // Ajoute d'autres styles ici pour l'état actif
+      color: darken($color-primary, 10%);
+
     }
   }
 
