@@ -31,7 +31,6 @@ const SidebarNav = () => {
           <PizzaIcon />
           <span>Pizzas</span>
         </li>
-        {/* Répéter pour les autres éléments, en appliquant la logique isActive */}
         <li
           className={isActive('menus') ? 'active' : ''}
           onClick={() => onMenuItemClick('menus')}
