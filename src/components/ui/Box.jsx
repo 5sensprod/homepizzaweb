@@ -1,7 +1,9 @@
 import React from 'react'
 import '../../styles/components/box.scss'
+import LikeButton from '../buttons/LikeButton'
 
 const Box = ({
+  id,
   title,
   subtitle,
   price,
@@ -29,6 +31,7 @@ const Box = ({
       {subtitle && <h2 className="box-subtitle">{subtitle}</h2>}
       {content && <div className="box-content">{content}</div>}
       <div className={backgroundClass}></div>
+      <LikeButton itemId={id} />
     </article>
   )
 }

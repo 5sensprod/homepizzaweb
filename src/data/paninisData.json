@@ -5,47 +5,56 @@
     {
       "id": "panini1",
       "subtitle": "Fermier",
-      "content": "Crème fraîche, fromage, poulet nature"
+      "content": "Crème fraîche, fromage, poulet nature",
+      "likes": 11
     },
     {
       "id": "panini2",
       "subtitle": "3 fromages",
-      "content": "Fromage, gorgonzola, emmental"
+      "content": "Fromage, gorgonzola, emmental",
+      "likes": 11
     },
     {
       "id": "panini3",
       "subtitle": "Viande hachée",
-      "content": "Fromage, sauce tomate, viande hachée"
+      "content": "Fromage, sauce tomate, viande hachée",
+      "likes": 11
     },
     {
       "id": "panini4",
       "subtitle": "Jambon",
-      "content": "Fromage, sauce tomate, jambon"
+      "content": "Fromage, sauce tomate, jambon",
+      "likes": 11
     },
     {
       "id": "panini5",
       "subtitle": "Tikka",
-      "content": "Crème fraîche, poulet curry, fromage, oignons"
+      "content": "Crème fraîche, poulet curry, fromage, oignons",
+      "likes": 11
     },
     {
       "id": "panini6",
       "subtitle": "Chèvre",
-      "content": "Crème fraîche, fromage, chèvre"
+      "content": "Crème fraîche, fromage, chèvre",
+      "likes": 11
     },
     {
       "id": "panini7",
       "subtitle": "Saumon",
-      "content": "Crème fraîche, fromage, saumon fumé"
+      "content": "Crème fraîche, fromage, saumon fumé",
+      "likes": 11
     },
     {
       "id": "panini8",
       "subtitle": "Thon",
-      "content": "Sauce tomate, thon, fromage"
+      "content": "Sauce tomate, thon, fromage",
+      "likes": 11
     },
     {
       "id": "panini9",
       "subtitle": "Nutella",
-      "content": "Nutella"
+      "content": "Nutella",
+      "likes": 11
     }
   ]
 }

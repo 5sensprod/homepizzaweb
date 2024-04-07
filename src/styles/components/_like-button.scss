@@ -1,0 +1,22 @@
+.like-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    svg {
+        width: 24px; // ou la taille désirée
+        height: auto;
+        fill: currentColor; // ou la couleur désirée
+        transition: fill 0.3s ease;
+
+        &:hover {
+            fill: red; // ou la couleur lors du survol
+        }
+    }
+
+    span {
+        margin-left: 8px; // ajuster l'espacement si nécessaire
+    }
+}

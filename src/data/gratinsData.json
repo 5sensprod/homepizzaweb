@@ -5,32 +5,38 @@
     {
       "id": "gratin1",
       "subtitle": "Poulet",
-      "content": "Crème fraîche, poulet, reblochon, oignons"
+      "content": "Crème fraîche, poulet, reblochon, oignons",
+      "likes": 11
     },
     {
       "id": "gratin2",
       "subtitle": "Viande hachée",
-      "content": "Crème fraîche, viande hachée, champignons"
+      "content": "Crème fraîche, viande hachée, champignons",
+      "likes": 9
     },
     {
       "id": "gratin3",
       "subtitle": "Tartiflette",
-      "content": "Crème fraîche, lardons, reblochon, oignons"
+      "content": "Crème fraîche, lardons, reblochon, oignons",
+      "likes": 19
     },
     {
       "id": "gratin4",
       "subtitle": "Bolognaise",
-      "content": "Sauce tomate, viande hachée, poivrons"
+      "content": "Sauce tomate, viande hachée, poivrons",
+      "likes": 22
     },
     {
       "id": "gratin5",
       "subtitle": "Pesto",
-      "content": "Crème fraîche, poulet, pesto"
+      "content": "Crème fraîche, poulet, pesto",
+      "likes": 12
     },
     {
       "id": "gratin6",
       "subtitle": "Carbonara",
-      "content": "Crème fraîche, lardons"
+      "content": "Crème fraîche, lardons",
+      "likes": 35
     }
   ]
 }

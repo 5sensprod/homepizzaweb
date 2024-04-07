@@ -26,18 +26,28 @@ export const MenuDataProvider = ({ children }) => {
 
   useEffect(() => {
     const loadMenuData = async () => {
-      const paninis = await fetchData('paninis')
-      const gratins = await fetchData('gratins')
+      try {
+        const paninis = await fetchData('paninis')
+        const gratins = await fetchData('gratins')
 
-      setPaninisData(paninis.default || paninis)
-      setGratinsData(gratins.default || gratins)
+        console.log('Paninis Data:', paninis) // Ajoutez cette ligne pour le débogage
+        console.log('Gratins Data:', gratins) // Ajoutez cette ligne pour le débogage
+
+        setPaninisData(paninis.default || paninis)
+        setGratinsData(gratins.default || gratins)
+      } catch (error) {
+        console.error('Erreur lors du chargement des données du menu:', error)
+      }
     }
 
     loadMenuData()
   }, [])
 
   return (
-    <MenuDataContext.Provider value={{ paninisData, gratinsData }}>
+    <MenuDataContext.Provider
+      value={{ paninisData, setPaninisData, gratinsData, setGratinsData }}
+    >
+      {' '}
       {children}
     </MenuDataContext.Provider>
   )

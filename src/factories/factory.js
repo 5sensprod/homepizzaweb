@@ -8,6 +8,7 @@ const boxFactory = (boxData) => {
       {' '}
       {/* Enveloppe chaque Box dans une div */}
       <Box
+        id={data.id}
         isHeaderVisible={false}
         title={data.title}
         subtitle={data.subtitle}
