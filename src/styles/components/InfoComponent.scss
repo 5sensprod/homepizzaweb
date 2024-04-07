@@ -1,9 +1,8 @@
-// src/styles/components/InfoComponent.scss
 .info-component {
     display: flex;
     flex-direction: column;
     align-items: center;
-    // background-color: #000;
+
     color: #fff;
     padding: 20px;
     border-radius: 10px;
@@ -23,18 +22,18 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        margin-top: -20px; // Ajustement pour compenser le décalage de .svg-icon
-        width: 100%; // Ajustez la largeur selon vos besoins
+        margin-top: -20px;
+        width: 100%;
     }
 
     .text {
-        width: 120px; // Ajustez la largeur selon vos besoins
+        width: 120px;
     }
 
     .phone {
         font-family: 'KGSecondChancesSketch', cursive;
         font-size: 22px;
         font-size: 28px;
-        align-self: flex-start; // Aligner le numéro de téléphone à droite
+        align-self: flex-start;
     }
 }

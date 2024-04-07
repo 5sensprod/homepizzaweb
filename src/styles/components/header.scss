@@ -1,9 +1,9 @@
 .header {
   display: flex;
-  justify-content: space-between; /* Cela aligne les éléments enfants aux extrémités opposées avec de l'espace entre eux */
-  align-items: center; /* Cela centre les éléments verticalement */
+  justify-content: space-between;
+  align-items: center;
   background-color: #4D4A55;
   height: 88px;
   width: 100%;
-  padding: 0 20px; /* Ajoute un peu d'espace sur les côtés pour que le contenu ne touche pas les bords */
+  padding: 0 20px;
 }

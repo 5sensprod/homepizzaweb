@@ -1,19 +1,19 @@
-// src/components/ui/inputSearch.scss
 .input-search-container {
-    display: flex;
-    align-items: center;
-    position: relative;
-    width: 177px; /* Assurez-vous que cela correspond à la largeur du champ Input */
-    height: 28px; /* Assurez-vous que cela correspond à la hauteur du champ Input */
-  
-    .custom-input {
-      padding-right: 30px; /* Faites de la place pour l'icône à l'intérieur de l'input */
-    }
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 177px;
+  height: 28px;
+
+  .custom-input {
+    padding-right: 30px;
+
   }
-  
-  .loupe-icon {
-    position: absolute;
-    right: 10px;
-    height: 100%;
-    pointer-events: none; /* Empêche l'icône d'intercepter les clics */
-  }
+}
+
+.loupe-icon {
+  position: absolute;
+  right: 10px;
+  height: 100%;
+  pointer-events: none;
+}

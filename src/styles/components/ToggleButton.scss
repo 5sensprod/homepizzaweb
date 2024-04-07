@@ -1,4 +1,3 @@
-// src/styles/components/_ToggleButton.scss
 @import '../abstracts/variables';
 @import '../mixins';
 
@@ -26,11 +25,12 @@
   z-index: 0;
 }
 
-.toggle-button-input:checked + .toggle-button-label:after {
+.toggle-button-input:checked+.toggle-button-label:after {
   transform: translateX(46px);
 }
 
-.sun-icon, .moon-icon {
+.sun-icon,
+.moon-icon {
   position: absolute;
   z-index: 10;
 
@@ -40,14 +40,14 @@
   left: 0;
   width: 34px;
   height: 34px;
-  top: 1px; 
+  top: 1px;
 }
 
 .moon-icon {
   width: 25px;
   height: 25px;
-  right: 7px; 
-  top: 5px; 
+  right: 7px;
+  top: 5px;
 }
 
 .toggle-button-input {

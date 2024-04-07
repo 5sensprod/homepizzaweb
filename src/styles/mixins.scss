@@ -4,7 +4,7 @@
   body.light {
     background-color: $color-light-background;
     color: $color-light-text;
-    
+
     &:hover {
       background-color: darken($color-light-background, 2%);
     }
@@ -23,11 +23,12 @@
       background-color: $color-light-background;
       color: $color-dark-text;
     }
+
     .menu {
       background-color: $color-light-background;
       color: $color-dark-text;
     }
-    
+
     // .toggle-button-label {
     //   background: $color-light-background;
     // }
@@ -35,6 +36,7 @@
     .toggle-button-label:after {
       background: $color-light-background;
     }
+
     .sun-icon {
       fill: $color-dark-text;
       background-color: transparent;
@@ -49,7 +51,7 @@
   body.dark {
     background-color: $color-dark-background;
     color: $color-dark-text;
-    
+
     &:hover {
       background-color: darken($color-dark-background, 2%);
     }
@@ -58,10 +60,12 @@
       background-color: $color-container-background-dark;
       color: $color-light-text;
     }
+
     .border-frame {
       background-color: $color-dark-background;
       color: $color-light-text;
     }
+
     .card {
       background-color: $color-dark-background;
       color: $color-light-text;
@@ -71,6 +75,7 @@
       background-color: $color-container-background-dark;
       color: $color-light-text;
     }
+
     // .toggle-button-label {
     //   background: $color-dark-background;
     // }
@@ -90,7 +95,8 @@
     }
   }
 
-  body, .centered-container {
+  body,
+  .centered-container {
     transition: background-color 0.3s ease, color 0.3s ease;
   }
 }

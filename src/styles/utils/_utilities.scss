@@ -1,11 +1,12 @@
 .theme-transition {
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .dark, .light {
-    @extend .theme-transition;
-  }
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
-  .hidden {
-    display: none;
-  }
+.dark,
+.light {
+  @extend .theme-transition;
+}
+
+.hidden {
+  display: none;
+}

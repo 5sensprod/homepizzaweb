@@ -1,16 +1,16 @@
 // inutile
 
 .light {
-    background-color: $color-light-background;
-    color: $color-light-text;
-  }
-  
-  .dark {
-    background-color: $color-dark-background;
-    color: $color-dark-text;
-  }
-  
-  .dark, .light {
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
+  background-color: $color-light-background;
+  color: $color-light-text;
+}
+
+.dark {
+  background-color: $color-dark-background;
+  color: $color-dark-text;
+}
+
+.dark,
+.light {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
