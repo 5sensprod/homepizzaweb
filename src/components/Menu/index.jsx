@@ -24,7 +24,7 @@ const Menu = ({ isOpen, onClose }) => {
     return () => {
       document.removeEventListener('mousedown', handleOutsideClick)
     }
-  }, [isOpen, onClose]) // Dépendances à isOpen et onClose
+  }, [isOpen, onClose])
 
   if (!isOpen) {
     return null
@@ -32,7 +32,7 @@ const Menu = ({ isOpen, onClose }) => {
 
   const handleNavigate = (menuType) => {
     navigate(`/menu/${menuType}`)
-    onClose() // Ferme le menu après la navigation
+    onClose()
   }
 
   const isActive = (menuType) => location.pathname.includes(`/menu/${menuType}`)
