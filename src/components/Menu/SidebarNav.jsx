@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate, useLocation } from 'react-router-dom'
 import { ReactComponent as PizzaIcon } from '../../assets/icons/pizza-icon.svg'
 import { ReactComponent as MenuDinishIcon } from '../../assets/icons/menu-dinish-icon.svg'
 import { ReactComponent as PaniniIcon } from '../../assets/icons/panini-icon.svg'
@@ -8,31 +9,47 @@ import { ReactComponent as ZapwishIcon } from '../../assets/icons/zapwish-icon.s
 import { ReactComponent as DessertIcon } from '../../assets/icons/dessert-icon.svg'
 import { ReactComponent as DrinkIcon } from '../../assets/icons/drink-icon.svg'
 
-import { useNavigate } from 'react-router-dom'
-// Les imports des icônes restent inchangés...
-
 const SidebarNav = () => {
   const navigate = useNavigate()
+  const location = useLocation()
 
   const onMenuItemClick = (menuType) => {
     navigate(`/menu/${menuType}`)
   }
+
+  const isActive = (menuType) => {
+    return location.pathname.includes(`/menu/${menuType}`)
+  }
+
   return (
     <nav className="sidebar-nav">
       <ul>
-        <li onClick={() => onMenuItemClick('pizzas')}>
+        <li
+          className={isActive('pizzas') ? 'active' : ''}
+          onClick={() => onMenuItemClick('pizzas')}
+        >
           <PizzaIcon />
           <span>Pizzas</span>
         </li>
-        <li onClick={() => onMenuItemClick('menus')}>
+        {/* Répéter pour les autres éléments, en appliquant la logique isActive */}
+        <li
+          className={isActive('menus') ? 'active' : ''}
+          onClick={() => onMenuItemClick('menus')}
+        >
           <MenuDinishIcon />
           <span>Menus</span>
         </li>
-        <li onClick={() => onMenuItemClick('paninis')}>
+        <li
+          className={isActive('paninis') ? 'active' : ''}
+          onClick={() => onMenuItemClick('paninis')}
+        >
           <PaniniIcon />
           <span>Paninis</span>
         </li>
-        <li onClick={() => onMenuItemClick('gratins')}>
+        <li
+          className={isActive('gratins') ? 'active' : ''}
+          onClick={() => onMenuItemClick('gratins')}
+        >
           <GratinIcon />
           <span>Gratins</span>
         </li>

@@ -86,10 +86,20 @@
     height: 66px; // ajustez la hauteur selon le contenu de la liste
     cursor: pointer;
 
+    &:hover {
+      background-color: lighten($color-primary, 10%);
+      color: #fff; // Ajoute une couleur de texte pour le hover si nécessaire
+    }
+
+    &.active {
+      background-color: darken($color-primary, 10%);
+      color: #fff; // Assure que le texte reste lisible sur le fond foncé
+    }
+
     svg {
       width: 48px;
       height: auto;
-      fill: white;
+      fill: currentColor;
     }
 
     span {
