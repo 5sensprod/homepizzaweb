@@ -1,7 +1,7 @@
 // src/components/cart/index.jsx
 import React from 'react'
 import { useCart } from '../../contexts/CartContext'
-import formatPrice from '../../utils/formatPrice' // Importez formatPrice
+import formatPrice from '../../utils/formatPrice'
 import '../../styles/components/cartDetails.scss'
 import QuantityAdjuster from '../ui/QuantityAdjuster'
 
@@ -9,7 +9,6 @@ const CartDetails = () => {
   const { cartItems, addToCart, removeFromCart, resetCart, getCartTotal } =
     useCart()
 
-  // Formattez le total du panier
   const formattedTotal = formatPrice(getCartTotal())
 
   return (
@@ -19,7 +18,6 @@ const CartDetails = () => {
           <h2>Votre Sélection</h2>
           <ul>
             {cartItems.map((item) => {
-              // Formattez chaque prix d'article
               const formattedItemPrice = formatPrice(item.price)
 
               return (
@@ -27,8 +25,7 @@ const CartDetails = () => {
                   <h3>
                     {item.title} - {item.subtitle}
                   </h3>
-                  <p>Prix unitaire: {formattedItemPrice}</p>{' '}
-                  {/* Utilisez formattedItemPrice ici */}
+                  <p>{formattedItemPrice}</p>
                   <QuantityAdjuster
                     quantity={item.quantity}
                     onIncrease={() => addToCart({ ...item, quantity: 1 })}
@@ -37,8 +34,7 @@ const CartDetails = () => {
                 </li>
               )
             })}
-            <div>Total du panier: {formattedTotal}</div>{' '}
-            {/* Utilisez formattedTotal ici */}
+            <div>Total du panier: {formattedTotal}</div>
             <button onClick={resetCart} className="reset-cart-button">
               Effacer la sélection
             </button>

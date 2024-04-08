@@ -8,7 +8,6 @@ const Box = ({
   id,
   title,
   subtitle,
-  price,
   content,
   isImageVisible,
   isLineVisible,
