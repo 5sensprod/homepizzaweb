@@ -1,7 +1,8 @@
 import React from 'react'
 import '../../styles/components/box.scss'
 import LikeButton from '../buttons/LikeButton'
-import { useCart } from '../../contexts/CartContext' // Importez le hook useCart
+import { useCart } from '../../contexts/CartContext'
+import QuantityAdjuster from './QuantityAdjuster'
 
 const Box = ({
   id,
@@ -16,7 +17,11 @@ const Box = ({
   categoryPrice,
 }) => {
   // Utilisez le hook useCart pour accéder à la fonction addToCart
-  const { addToCart } = useCart()
+  const { cartItems, addToCart, removeFromCart } = useCart()
+
+  // Trouvez l'item dans le panier par son id
+  const cartItem = cartItems.find((item) => item.id === id)
+  const isInCart = Boolean(cartItem)
 
   // Classe conditionnelle pour le conteneur de l'image de fond
   const backgroundClass = isImageVisible
@@ -46,10 +51,21 @@ const Box = ({
       <div className="header-menu">
         {subtitle && <h2 className="box-subtitle">{subtitle}</h2>}
         <LikeButton itemId={id} />
-        {/* Bouton pour ajouter au panier */}
-        <button onClick={() => addToCart(menu)} className="add-to-cart-button">
-          Ajouter au panier
-        </button>
+        {/* Conditionnellement afficher QuantityAdjuster ou le bouton ajouter au panier */}
+        {isInCart ? (
+          <QuantityAdjuster
+            quantity={cartItem.quantity}
+            onIncrease={() => addToCart(menu)}
+            onDecrease={() => removeFromCart(id)}
+          />
+        ) : (
+          <button
+            onClick={() => addToCart(menu)}
+            className="add-to-cart-button"
+          >
+            Ajouter au panier
+          </button>
+        )}
       </div>
       {content && <div className="box-content">{content}</div>}
       <div className={backgroundClass}></div>
