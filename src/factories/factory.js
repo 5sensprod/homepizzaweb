@@ -2,20 +2,18 @@
 import React from 'react'
 import Box from '../components/ui/Box'
 
-const boxFactory = (boxData) => {
+const boxFactory = (boxData, { categoryTitle, categoryPrice }) => {
   return boxData.map((data) => (
     <div key={data.id}>
-      {' '}
-      {/* Enveloppe chaque Box dans une div */}
       <Box
         id={data.id}
         isHeaderVisible={false}
-        title={data.title}
         subtitle={data.subtitle}
-        price={data.price}
+        content={data.content}
         isImageVisible={true}
         isLineVisible={true}
-        content={data.content}
+        categoryTitle={categoryTitle} // Nouveau: passe le titre de la catégorie
+        categoryPrice={categoryPrice} // Nouveau: passe le prix de la catégorie
       />
     </div>
   ))
