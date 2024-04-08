@@ -6,20 +6,36 @@ export const CartContext = createContext()
 export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([])
 
-  const addToCart = (item) => {
+  const addToCart = (newItem) => {
     setCartItems((prevItems) => {
-      const newItems = [...prevItems, item]
-      console.log('Panier après ajout:', newItems) // Log après ajout
-      return newItems
+      const itemIndex = prevItems.findIndex((item) => item.id === newItem.id)
+      if (itemIndex > -1) {
+        // L'article existe déjà, augmentez la quantité
+        const newItems = [...prevItems]
+        newItems[itemIndex].quantity += 1 // Assurez-vous que chaque article a une propriété `quantity`
+        return newItems
+      } else {
+        // Ajoutez un nouvel article avec une quantité initiale de 1
+        return [...prevItems, { ...newItem, quantity: 1 }]
+      }
     })
   }
 
   const removeFromCart = (itemId) => {
-    setCartItems((prevItems) => {
-      const newItems = prevItems.filter((item) => item.id !== itemId)
-      console.log('Panier après suppression:', newItems) // Log après suppression
-      return newItems
-    })
+    setCartItems((prevItems) =>
+      prevItems.reduce((acc, item) => {
+        if (item.id === itemId) {
+          if (item.quantity > 1) {
+            // Diminuez la quantité s'il y a plus d'un
+            acc.push({ ...item, quantity: item.quantity - 1 })
+          }
+          // Si la quantité est 1, l'article sera simplement ignoré et donc retiré
+        } else {
+          acc.push(item)
+        }
+        return acc
+      }, []),
+    )
   }
 
   return (

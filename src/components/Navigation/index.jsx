@@ -3,17 +3,17 @@ import { ReactComponent as MenuIcon } from '../../assets/icons/menu_icon_hand_dr
 import { ReactComponent as PizzaScooterIcon } from '../../assets/icons/pizza_scooter_icon_hand_drawn.svg'
 import Menu from '../Menu'
 import CartBadge from '../ui/CartBadge'
+import CartDetails from '../cart'
 
 const Navigation = () => {
   const [isMenuOpen, setMenuOpen] = useState(false)
+  const [isCartOpen, setCartOpen] = useState(false)
 
   const handleMenuClick = () => {
     setMenuOpen(!isMenuOpen)
   }
 
-  const handlePizzaScooterClick = () => {
-    console.log('Pizza Scooter Icon Clicked')
-  }
+  const handlePizzaScooterClick = () => setCartOpen(!isCartOpen)
 
   const handleCloseMenu = () => {
     setMenuOpen(false)
@@ -22,10 +22,10 @@ const Navigation = () => {
   return (
     <nav className="navigation">
       <MenuIcon onClick={handleMenuClick} />
-      {/* Positionnez le CartBadge à proximité de l'icône scooter */}
       <div style={{ position: 'relative' }}>
         <PizzaScooterIcon onClick={handlePizzaScooterClick} />
-        <CartBadge /> {/* Ajoutez le CartBadge ici */}
+        <CartBadge />
+        {isCartOpen && <CartDetails />}
       </div>
       <Menu isOpen={isMenuOpen} onClose={handleCloseMenu} />
     </nav>
