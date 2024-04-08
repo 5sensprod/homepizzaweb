@@ -1,12 +1,16 @@
 import React from 'react'
+import { useCompanyData } from '../../contexts/CompanyDataContext'
+import etoilePng from '../../assets/etoile.png'
 
-const InfoComponent = ({ svg, text, phone }) => {
+const InfoComponent = () => {
+  const { companyData } = useCompanyData()
+
   return (
     <div className="info-component">
-      <img src={svg} className="svg-icon" alt="Icone" />
+      <img src={etoilePng} className="svg-icon" alt="Icône étoile" />
       <div className="content">
-        <div className="text">{text}</div>
-        <div className="phone">{phone}</div>
+        <div className="text">{companyData.name}</div>
+        <div className="phone">{companyData.phone}</div>
       </div>
     </div>
   )

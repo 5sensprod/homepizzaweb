@@ -4,7 +4,6 @@ import Header from '../Header'
 import Footer from '../Footer'
 import InfoComponent from '../widgets/InfoComponent'
 import PizzeriaStatusWidget from '../widgets/PizzeriaStatusWidget'
-import etoilePng from '../../assets/etoile.png'
 import CheckmarkLabel from '../widgets/CheckmarkLabel'
 import SidebarNav from '../Menu/SidebarNav'
 import { Routes, Route } from 'react-router-dom'
@@ -19,11 +18,7 @@ const Layout = () => {
       <Header />
       <div className="layout-flex">
         <aside className="left-zone">
-          <InfoComponent
-            svg={etoilePng}
-            text="LE CORBUSIER SAINT MEMMIE"
-            phone="03 26 22 18 22"
-          />
+          <InfoComponent />
           <PizzeriaStatusWidget
             name="Saint-Memmie"
             isOpen={true}
