@@ -39,13 +39,19 @@
     display: flex;
     align-items: center;
   }
-
   .status-indicator {
     width: 10px;
     height: 10px;
     border-radius: 50%;
     margin-left: 5px;
-    background-color: #0f0;
+  }
+  
+  .open {
+    background-color: #0f0; /* Vert */
+  }
+  
+  .closed {
+    background-color: #f00; /* Rouge */
   }
 
   .pizzeria-time {

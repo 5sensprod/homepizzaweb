@@ -19,11 +19,7 @@ const Layout = () => {
       <div className="layout-flex">
         <aside className="left-zone">
           <InfoComponent />
-          <PizzeriaStatusWidget
-            name="Saint-Memmie"
-            isOpen={true}
-            time="11:57"
-          />
+          <PizzeriaStatusWidget />
           <CheckmarkLabel text="À emporter" isChecked={true} />
           <CheckmarkLabel text="Livraison" />
           <CheckmarkLabel text="Sur place" isChecked={false} />
