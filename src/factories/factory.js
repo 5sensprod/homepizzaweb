@@ -2,7 +2,10 @@
 import React from 'react'
 import Box from '../components/ui/Box'
 
-const boxFactory = (boxData, { categoryTitle, categoryPrice }) => {
+const boxFactory = (
+  boxData,
+  { categoryTitle, categoryPrice, formattedCategoryPrice },
+) => {
   return boxData.map((data) => (
     <div key={data.id}>
       <Box

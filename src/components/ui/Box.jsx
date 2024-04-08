@@ -15,6 +15,7 @@ const Box = ({
   isHeaderVisible,
   categoryTitle,
   categoryPrice,
+  formattedCategoryPrice,
 }) => {
   // Utilisez le hook useCart pour accéder à la fonction addToCart
   const { cartItems, addToCart, removeFromCart } = useCart()
@@ -29,6 +30,10 @@ const Box = ({
     : 'box-image-background hidden'
   // Classe conditionnelle pour l'élément de la ligne
   const lineClass = isLineVisible ? 'box-line' : 'box-line hidden'
+
+  const displayPrice = formattedCategoryPrice ? (
+    <div className="box-price">{formattedCategoryPrice}</div>
+  ) : null
 
   // Préparez l'objet menu pour l'ajout au panier
   const menu = {
@@ -45,7 +50,7 @@ const Box = ({
         <div className="box-header">
           <h1 className="box-title">{title}</h1>
           <span className={lineClass}></span>
-          {price && <div className="box-price">{price}</div>}
+          {displayPrice}
         </div>
       )}
       <div className="header-menu">

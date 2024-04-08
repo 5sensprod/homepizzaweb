@@ -21,7 +21,8 @@ const MenuPage = () => {
   // Utilise boxFactory pour générer les éléments, puis enveloppe chacun dans une div
   const menuBoxes = boxFactory(menuInfo.items || [], {
     categoryTitle: menuInfo.title,
-    categoryPrice: formattedPrice,
+    categoryPrice: menuInfo.price, // passez le prix original ici
+    formattedCategoryPrice: formattedPrice, // ajoutez ceci pour l'affichage
   }).map((boxElement, index) => <div key={index}>{boxElement}</div>)
 
   return (
