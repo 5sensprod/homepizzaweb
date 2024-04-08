@@ -1,4 +1,3 @@
-// src/components/cart/index.jsx
 import React from 'react'
 import { useCart } from '../../contexts/CartContext'
 import formatPrice from '../../utils/formatPrice'

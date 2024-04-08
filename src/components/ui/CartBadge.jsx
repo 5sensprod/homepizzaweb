@@ -4,7 +4,6 @@ import { useCart } from '../../contexts/CartContext'
 const CartBadge = () => {
   const { cartItems } = useCart()
 
-  // Calculer le nombre total d'articles en additionnant les quantités de chaque item
   const totalItemCount = cartItems.reduce(
     (total, item) => total + item.quantity,
     0,

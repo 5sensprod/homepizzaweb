@@ -1,4 +1,3 @@
-// src/contexts/CartContext.js
 import React, { createContext, useState, useContext } from 'react'
 
 export const CartContext = createContext()
@@ -10,7 +9,6 @@ export const CartProvider = ({ children }) => {
     setCartItems((prevItems) => {
       const itemIndex = prevItems.findIndex((item) => item.id === newItem.id)
       if (itemIndex > -1) {
-        // L'article existe déjà, augmentez seulement la quantité
         const newItems = [...prevItems]
         newItems[itemIndex] = {
           ...newItems[itemIndex],
@@ -18,7 +16,6 @@ export const CartProvider = ({ children }) => {
         }
         return newItems
       } else {
-        // Ajoutez un nouvel article avec une quantité initiale de 1
         return [...prevItems, { ...newItem, quantity: 1 }]
       }
     })
@@ -47,7 +44,7 @@ export const CartProvider = ({ children }) => {
 
   const getCartTotal = () => {
     return cartItems.reduce((total, item) => {
-      const price = parseFloat(item.price) // Assurez-vous que ceci est un nombre
+      const price = parseFloat(item.price)
       return total + price * item.quantity
     }, 0)
   }
@@ -61,5 +58,4 @@ export const CartProvider = ({ children }) => {
   )
 }
 
-// Hook personnalisé pour utiliser le contexte du panier
 export const useCart = () => useContext(CartContext)
