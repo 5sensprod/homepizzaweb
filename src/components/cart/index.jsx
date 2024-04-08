@@ -2,9 +2,10 @@
 import React from 'react'
 import { useCart } from '../../contexts/CartContext'
 import '../../styles/components/cartDetails.scss'
+import QuantityAdjuster from '../ui/QuantityAdjuster'
 
 const CartDetails = () => {
-  const { cartItems, removeFromCart } = useCart()
+  const { cartItems, addToCart, removeFromCart } = useCart()
 
   return (
     <div className="cart-details">
@@ -18,14 +19,11 @@ const CartDetails = () => {
                   {item.title} - {item.subtitle}
                 </h3>
                 <p>Prix unitaire: {item.price}</p>
-                <p>Quantité: {item.quantity}</p>
-                {/* Mettre en évidence la modification du bouton pour retirer des articles */}
-                <div className="buttons">
-                  <button onClick={() => removeFromCart(item.id)}>
-                    Retirer un
-                  </button>
-                  {/* Vous pouvez également ajouter un bouton pour augmenter la quantité si nécessaire */}
-                </div>
+                <QuantityAdjuster
+                  quantity={item.quantity}
+                  onIncrease={() => addToCart({ ...item, quantity: 1 })}
+                  onDecrease={() => removeFromCart(item.id)}
+                />
               </li>
             ))}
           </ul>

@@ -10,9 +10,12 @@ export const CartProvider = ({ children }) => {
     setCartItems((prevItems) => {
       const itemIndex = prevItems.findIndex((item) => item.id === newItem.id)
       if (itemIndex > -1) {
-        // L'article existe déjà, augmentez la quantité
+        // L'article existe déjà, augmentez seulement la quantité
         const newItems = [...prevItems]
-        newItems[itemIndex].quantity += 1 // Assurez-vous que chaque article a une propriété `quantity`
+        newItems[itemIndex] = {
+          ...newItems[itemIndex],
+          quantity: newItems[itemIndex].quantity + 1,
+        }
         return newItems
       } else {
         // Ajoutez un nouvel article avec une quantité initiale de 1
@@ -22,8 +25,8 @@ export const CartProvider = ({ children }) => {
   }
 
   const removeFromCart = (itemId) => {
-    setCartItems((prevItems) =>
-      prevItems.reduce((acc, item) => {
+    setCartItems((prevItems) => {
+      return prevItems.reduce((acc, item) => {
         if (item.id === itemId) {
           if (item.quantity > 1) {
             // Diminuez la quantité s'il y a plus d'un
@@ -34,8 +37,8 @@ export const CartProvider = ({ children }) => {
           acc.push(item)
         }
         return acc
-      }, []),
-    )
+      }, [])
+    })
   }
 
   return (

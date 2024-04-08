@@ -1,0 +1,21 @@
+.quantity-adjuster {
+    display: flex;
+    align-items: center;
+  
+    button {
+      background-color: #f0f0f0;
+      border: 1px solid #ddd;
+      padding: 5px 10px;
+      cursor: pointer;
+      user-select: none;
+  
+      &:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+      }
+    }
+  
+    span {
+      margin: 0 10px;
+    }
+  }
