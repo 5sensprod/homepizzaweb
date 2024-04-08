@@ -5,7 +5,7 @@ import '../../styles/components/cartDetails.scss'
 import QuantityAdjuster from '../ui/QuantityAdjuster'
 
 const CartDetails = () => {
-  const { cartItems, addToCart, removeFromCart } = useCart()
+  const { cartItems, addToCart, removeFromCart, resetCart } = useCart()
 
   return (
     <div className="cart-details">
@@ -26,6 +26,9 @@ const CartDetails = () => {
                 />
               </li>
             ))}
+            <button onClick={resetCart} className="reset-cart-button">
+              Vider le panier
+            </button>
           </ul>
         </>
       ) : (
