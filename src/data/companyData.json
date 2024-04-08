@@ -1,0 +1,66 @@
+{
+  "id": "le-corbusier-saint-memmie",
+  "name": "LE CORBUSIER",
+  "location": "SAINT MEMMIE",
+  "phone": "03 26 22 18 22",
+  "openingHours": [
+    {
+      "day": "monday",
+      "isOpen": false,
+      "hours": []
+    },
+    {
+      "day": "tuesday",
+      "isOpen": true,
+      "hours": [
+        { "start": "11:30", "end": "13:45" },
+        { "start": "18:30", "end": "22:30" }
+      ]
+    },
+    {
+      "day": "wednesday",
+      "isOpen": true,
+      "hours": [
+        { "start": "11:30", "end": "13:45" },
+        { "start": "18:30", "end": "22:30" }
+      ]
+    },
+    {
+      "day": "thursday",
+      "isOpen": true,
+      "hours": [
+        { "start": "11:30", "end": "13:45" },
+        { "start": "18:30", "end": "22:30" }
+      ]
+    },
+    {
+      "day": "friday",
+      "isOpen": true,
+      "hours": [
+        { "start": "11:30", "end": "13:45" },
+        { "start": "18:30", "end": "22:45" }
+      ]
+    },
+    {
+      "day": "saturday",
+      "isOpen": true,
+      "hours": [
+        { "start": "11:30", "end": "13:45" },
+        { "start": "18:30", "end": "22:45" }
+      ]
+    },
+    {
+      "day": "sunday",
+      "isOpen": true,
+      "hours": [{ "start": "18:30", "end": "22:30" }]
+    }
+  ],
+  "services": {
+    "takeAway": true,
+    "delivery": true,
+    "onSite": false
+  },
+  "socialMedia": {
+    "facebook": "https://www.facebook.com/homepizzastmemmie51470"
+  }
+}
