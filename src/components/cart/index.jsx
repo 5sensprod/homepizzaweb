@@ -5,7 +5,8 @@ import '../../styles/components/cartDetails.scss'
 import QuantityAdjuster from '../ui/QuantityAdjuster'
 
 const CartDetails = () => {
-  const { cartItems, addToCart, removeFromCart, resetCart } = useCart()
+  const { cartItems, addToCart, removeFromCart, resetCart, getCartTotal } =
+    useCart()
 
   return (
     <div className="cart-details">
@@ -18,7 +19,7 @@ const CartDetails = () => {
                 <h3>
                   {item.title} - {item.subtitle}
                 </h3>
-                <p>Prix unitaire: {item.price}</p>
+                <p>{item.price}</p>
                 <QuantityAdjuster
                   quantity={item.quantity}
                   onIncrease={() => addToCart({ ...item, quantity: 1 })}
@@ -26,8 +27,9 @@ const CartDetails = () => {
                 />
               </li>
             ))}
+            <div>Total du panier: {getCartTotal().toFixed(2)} €</div>
             <button onClick={resetCart} className="reset-cart-button">
-              Vider le panier
+              Effacer la sélection
             </button>
           </ul>
         </>

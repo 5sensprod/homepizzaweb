@@ -44,9 +44,17 @@ export const CartProvider = ({ children }) => {
   const resetCart = () => {
     setCartItems([])
   }
+
+  const getCartTotal = () => {
+    return cartItems.reduce((total, item) => {
+      const price = parseFloat(item.price.replace(',', '.'))
+      return total + price * item.quantity
+    }, 0)
+  }
+
   return (
     <CartContext.Provider
-      value={{ cartItems, addToCart, removeFromCart, resetCart }}
+      value={{ cartItems, addToCart, removeFromCart, resetCart, getCartTotal }}
     >
       {children}
     </CartContext.Provider>
