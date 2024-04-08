@@ -52,8 +52,11 @@ const LikeButton = ({ itemId }) => {
   }
 
   return (
-    <button onClick={toggleLike} className="like-button">
-      <HeartIcon />
+    <button
+      onClick={toggleLike}
+      className={`like-button ${isLiked ? 'liked' : ''}`}
+    >
+      <HeartIcon className={isLiked ? 'liked' : ''} />
       <span>{likes}</span>
     </button>
   )

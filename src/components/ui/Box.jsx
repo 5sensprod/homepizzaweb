@@ -28,10 +28,12 @@ const Box = ({
           {price && <div className="box-price">{price}</div>}
         </div>
       )}
-      {subtitle && <h2 className="box-subtitle">{subtitle}</h2>}
+      <div className="header-menu">
+        {subtitle && <h2 className="box-subtitle">{subtitle}</h2>}
+        <LikeButton itemId={id} />
+      </div>
       {content && <div className="box-content">{content}</div>}
       <div className={backgroundClass}></div>
-      <LikeButton itemId={id} />
     </article>
   )
 }
