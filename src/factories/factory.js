@@ -2,10 +2,7 @@
 import React from 'react'
 import Box from '../components/ui/Box'
 
-const boxFactory = (
-  boxData,
-  { categoryTitle, categoryPrice, formattedCategoryPrice },
-) => {
+const boxFactory = (boxData, { categoryTitle, categoryPrice }) => {
   return boxData.map((data) => (
     <div key={data.id}>
       <Box
@@ -15,8 +12,8 @@ const boxFactory = (
         content={data.content}
         isImageVisible={true}
         isLineVisible={true}
-        categoryTitle={categoryTitle} // Nouveau: passe le titre de la catégorie
-        categoryPrice={categoryPrice} // Nouveau: passe le prix de la catégorie
+        categoryTitle={categoryTitle}
+        categoryPrice={categoryPrice}
       />
     </div>
   ))

@@ -1,12 +1,13 @@
 import React from 'react'
 import '../../styles/components/box.scss'
 import LikeButton from '../buttons/LikeButton'
-import { useCart } from '../../contexts/CartContext'
 import QuantityAdjuster from './QuantityAdjuster'
+import { useCart } from '../../contexts/CartContext'
+import classNames from 'classnames'
+import BoxHeader from './BoxHeader'
 
 const Box = ({
   id,
-  title,
   subtitle,
   content,
   isImageVisible,
@@ -16,57 +17,48 @@ const Box = ({
   categoryPrice,
   formattedCategoryPrice,
 }) => {
-  // Utilisez le hook useCart pour accéder à la fonction addToCart
   const { cartItems, addToCart, removeFromCart } = useCart()
+  const isInCart = cartItems.some((item) => item.id === id)
+  const cartItem = cartItems.find((item) => item.id === id) || {}
 
-  // Trouvez l'item dans le panier par son id
-  const cartItem = cartItems.find((item) => item.id === id)
-  const isInCart = Boolean(cartItem)
+  const backgroundClass = classNames('box-image-background', {
+    hidden: !isImageVisible,
+  })
 
-  // Classe conditionnelle pour le conteneur de l'image de fond
-  const backgroundClass = isImageVisible
-    ? 'box-image-background'
-    : 'box-image-background hidden'
-  // Classe conditionnelle pour l'élément de la ligne
-  const lineClass = isLineVisible ? 'box-line' : 'box-line hidden'
+  const lineClass = classNames('box-line', {
+    hidden: !isLineVisible,
+  })
 
-  const displayPrice = formattedCategoryPrice ? (
-    <div className="box-price">{formattedCategoryPrice}</div>
-  ) : null
-
-  // Préparez l'objet menu pour l'ajout au panier
-  const menu = {
-    id,
-    title: categoryTitle,
-    price: categoryPrice,
-    subtitle,
-    content,
+  const handleAddToCart = () => {
+    addToCart({
+      id,
+      title: categoryTitle,
+      price: categoryPrice,
+      subtitle,
+      content,
+    })
   }
 
   return (
     <article className="box">
       {isHeaderVisible && (
-        <div className="box-header">
-          <h1 className="box-title">{title}</h1>
-          <span className={lineClass}></span>
-          {displayPrice}
-        </div>
+        <BoxHeader
+          title={categoryTitle}
+          price={formattedCategoryPrice}
+          lineClass={lineClass}
+        />
       )}
       <div className="header-menu">
         {subtitle && <h2 className="box-subtitle">{subtitle}</h2>}
         <LikeButton itemId={id} />
-        {/* Conditionnellement afficher QuantityAdjuster ou le bouton ajouter au panier */}
         {isInCart ? (
           <QuantityAdjuster
             quantity={cartItem.quantity}
-            onIncrease={() => addToCart(menu)}
+            onIncrease={handleAddToCart}
             onDecrease={() => removeFromCart(id)}
           />
         ) : (
-          <button
-            onClick={() => addToCart(menu)}
-            className="add-to-cart-button"
-          >
+          <button onClick={handleAddToCart} className="add-to-cart-button">
             Ajouter au panier
           </button>
         )}

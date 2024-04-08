@@ -18,11 +18,10 @@ const MenuPage = () => {
     // slidesToScroll: 3,
   }
 
-  // Utilise boxFactory pour générer les éléments, puis enveloppe chacun dans une div
   const menuBoxes = boxFactory(menuInfo.items || [], {
     categoryTitle: menuInfo.title,
-    categoryPrice: menuInfo.price, // passez le prix original ici
-    formattedCategoryPrice: formattedPrice, // ajoutez ceci pour l'affichage
+    categoryPrice: menuInfo.price,
+    formattedCategoryPrice: formattedPrice,
   }).map((boxElement, index) => <div key={index}>{boxElement}</div>)
 
   return (
