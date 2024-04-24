@@ -1,3 +1,4 @@
+// src/components/layout/MenuLayout.jsx
 import React from 'react'
 import { useTheme } from '../../contexts/ThemeContext'
 import Header from '../Header'
@@ -6,10 +7,8 @@ import InfoComponent from '../widgets/InfoComponent'
 import PizzeriaStatusWidget from '../widgets/PizzeriaStatusWidget'
 import CheckmarkLabel from '../widgets/CheckmarkLabel'
 import SidebarNav from '../Menu/SidebarNav'
-import { Routes, Route } from 'react-router-dom'
-import MenuPage from '../pages/MenuPage'
 
-const Layout = () => {
+const MenuLayout = ({ children }) => {
   const { theme } = useTheme()
   const containerClass = `centered-container ${theme}`
 
@@ -24,11 +23,7 @@ const Layout = () => {
           <CheckmarkLabel text="Livraison" />
           <CheckmarkLabel text="Sur place" isChecked={false} />
         </aside>
-        <main className="center-zone">
-          <Routes>
-            <Route path="/menu/:menuType" element={<MenuPage />} />
-          </Routes>
-        </main>
+        <main className="center-zone">{children}</main>
         <aside className="right-zone">
           <SidebarNav />
         </aside>
@@ -38,4 +33,4 @@ const Layout = () => {
   )
 }
 
-export default Layout
+export default MenuLayout
